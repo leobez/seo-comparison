@@ -10,8 +10,51 @@ export const metadata = {
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="en">
-      <body className={inter.className}>{children}</body>
+    <html lang="pt-br">
+
+      <body className={inter.className}>
+
+        <div className="grid">
+
+          <header className="p-4 bg-slate-950 flex justify-between">
+
+            <div className="flex flex-col gap-2">
+              <p className="text-slate-200 text-xl font-bold">SSR e CSR</p>
+              <p className=" text-slate-400">Este site é SSR</p>
+            </div>
+
+            <nav className="border-2 border-slate-200 grid p-1">
+              <ul className="flex text-slate-200 p-1">
+                <li className="nav-item"><a href="/">Home</a></li>
+                <li className="nav-item"><a href="/">Web</a></li>
+                <li className="nav-item"><a href="/">SSR</a></li>
+                <li className="nav-item"><a href="/">CSR</a></li>
+                <li className="nav-item"><a href="/">SEO</a></li>
+              </ul>
+            </nav>
+
+          </header>
+
+          <div className="min-h-[100vh] p-4">
+            {children}
+          </div>
+          
+          <footer className="p-4 bg-slate-950 flex justify-between">
+            <div className="flex flex-col gap-2">
+              <p className="text-slate-200 text-xl font-bold">SSR e CSR</p>
+              <p className=" text-slate-400">Este site é SSR</p>
+            </div>
+
+            <div className="grid place-items-center">
+              <p className="text-slate-200 font-bold">Leonardo de Souza Bezerra</p>
+            </div>
+
+          </footer>
+
+        </div>
+
+      </body>
+
     </html>
   );
 }
