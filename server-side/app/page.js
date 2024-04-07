@@ -2,7 +2,7 @@
 export default function Home() {
 
   return (
-    <main>
+    <main className="text-slate-950">
 
       <h1 className="text-xl font-bold">
         Trabalho de conclusão de curso.
@@ -18,10 +18,14 @@ export default function Home() {
 
       <p className="text-justify">
         A fim de realizar essa comparação, é necessário determinar os seguintes aspectos de ambas as abordagens:
-        <ul>
+      </p>
+      
+      <ul>
           <li>Compatibilidade com motores de busca;</li>
           <li>Usabilidade das páginas.</li>
-        </ul>
+      </ul>
+
+      <p>
         Esses aspectos serão testados de uma forma prática, através do desenvolvimento de dois sites, em que um utilize de SSR e o outro utilize de CSR. Dessa forma, 
       </p>
 
