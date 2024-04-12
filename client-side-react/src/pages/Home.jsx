@@ -1,6 +1,6 @@
+import React from 'react'
 
-export default function Home() {
-
+const Home = () => {
   return (
     <main className="text-slate-950">
 
@@ -28,3 +28,5 @@ export default function Home() {
     </main>
   );
 }
+
+export default Home
