@@ -26,11 +26,11 @@ function App() {
 
             <nav className="border-2 border-slate-200 grid p-1">
               <ul className="flex text-slate-200 p-1">
-                <li className="nav-item"><Link href="/">Home</Link></li>
-                <li className="nav-item"><Link href="/page1">Page1</Link></li>
-                <li className="nav-item"><Link href="/page2">Page2</Link></li>
-                <li className="nav-item"><Link href="/page3">Page3</Link></li>
-                <li className="nav-item"><Link href="/page4">Page4</Link></li>
+                <li className="nav-item"><Link to="/">Home</Link></li>
+                <li className="nav-item"><Link to="/page1">Page1</Link></li>
+                <li className="nav-item"><Link to="/page2">Page2</Link></li>
+                <li className="nav-item"><Link to="/page3">Page3</Link></li>
+                <li className="nav-item"><Link to="/page4">Page4</Link></li>
               </ul>
             </nav>
 
