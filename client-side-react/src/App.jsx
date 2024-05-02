@@ -10,7 +10,7 @@ import Web from './pages/Web'
 function App() {
 
   return (
-    <div>
+    <div className='flex flex-col min-h-screen'>
 
       <BrowserRouter>
 
@@ -37,8 +37,8 @@ function App() {
 
         </header>
 
-        <div className="max-h-full w-full flex justify-center bg-slate-200">
-          <div className="max-w-4xl xl:min-w-[896px] bg-white p-4 shadow-lg">
+        <div className="max-h-full w-full flex justify-center bg-slate-200 flex-1 min-h-0">
+          <div className="max-w-5xl xl:min-w-[1024px] bg-white shadow-lg">
             <Routes>
               <Route path='/' element={<Home/>}></Route>
               <Route path='/web' element={<Web/>}></Route>
