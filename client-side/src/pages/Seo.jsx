@@ -1,20 +1,24 @@
 import React from 'react'
+import Summary from '../components/Summary'
 
-const SEO = () => {
+const Seo = () => {
+
+  const topics = {
+    'ferramentas_de_busca': "Ferramentas de busca",
+    'seo': "SEO",
+    'referencias': 'Referências', 
+  }
+
   return (
     <div className='flex'>
 
       {/* SUMÁRIO */}
-      <div className='w-48 sticky top-0 h-[100vh] border-r border-black p-4'>
-        <p>Sumário</p>
-        <p>Ferramentas de busca</p>
-        <p>SEO</p>
-        <p>Referências</p>
-      </div>
+      <Summary items={topics}/>
 
       {/* CONTEÚDO */}
       <div className='flex-1 p-4'>
-        <section className='my-1'>
+
+        <section className='my-1' id='ferramentas_de_busca'>
           <h1 className='text-xl font-bold'>Ferramentas de busca</h1>
           
           <div>
@@ -45,7 +49,7 @@ const SEO = () => {
 
         <div className='separator'/>
 
-        <section className='my-1'>
+        <section className='my-1' id='seo'>
           <h1 className='text-xl font-bold'>SEO</h1>
           
           <div>
@@ -62,13 +66,13 @@ const SEO = () => {
               A exata forma como esses aspectos influenciam na posição final de um site é algo que apenas o criador do algoritmo específico utilizado pelo motor de busca sabe, mas uma coisa é certa: quan-to maior for a pontuação de qualidade de um site, melhor serão seus resultados nos motores de busca <span className='reference'>(Ledford, 2008, p. 10-11)</span>.  É justamente para isto que serve SEO. <span className='reference'>Yalçın e Köse (2010, p. 488)</span> definem SEO como o processo de fazer com que sites apareçam no topo da lista de re-sultados nos motores de busca. E isto é algo muito importante, visto que, segundo alguns dados de <span className='reference'>Dean (2023)</span>: 
             </p>
 
-            <p className='paragraph'>
+            <div className='paragraph'>
               <ul className='list-disc list-inside pl-4 max-w-xl'>
                 <li>O primeiro resultado orgânico de uma pesquisa possui 10 vezes mais chance de receber um click quando comparado ao décimo resultado;</li>
                 <li>O primeiro resultado em uma pesquisa no Google possui uma Taxa de Cliques (CTR) média de 27.6%; </li>
                 <li>Mover 1 posição para cima em motores de busca pode resultar em um aumento de CTR de até 2.8%. </li>
               </ul>
-            </p>
+            </div>
 
             <p className='paragraph'>
               Estes dados mostram que é de suma importância para um site obter boas posições em motores de busca, visto que aqueles que obtém possuem muito mais chances de atrair usuários na Web. E para isso é necessário utilizar boas práticas de SEO. 
@@ -80,7 +84,8 @@ const SEO = () => {
         
         <div className='separator'/>
 
-        <section className='my-1'>
+        {/* Referências */}
+        <section className='my-1' id='referencias'>
           <h1 className='text-xl font-bold'>Referências</h1>
           
           <div>
@@ -108,6 +113,7 @@ const SEO = () => {
           </div>
 
         </section>
+
       </div>
 
 
@@ -116,4 +122,4 @@ const SEO = () => {
   )
 }
 
-export default SEO
+export default Seo

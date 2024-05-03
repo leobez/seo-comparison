@@ -4,32 +4,37 @@ import HTMLimage from '../assets/html.png'
 import CSSimage from '../assets/css.png'
 import HTTPmethods from '../assets/métodos_HTTP.png'
 
+import Summary from '../components/Summary'
+
 const Web = () => {
+
+  const topics = {
+    'web': "Web",
+    'linguagens_da_web': "Linguagens da Web",
+    'html': 'HTML', 
+    'css': 'CSS', 
+    'javascript': 'JavaScript', 
+    'http': 'HTTP', 
+    'metodos_http': 'Métodos HTTP', 
+    'servidor_web': 'Servidor web', 
+    'servidor_web_estatico':'Servidor web estático', 
+    'servidor_web_dinamico': 'Servidor web dinâmico', 
+    'navegador_web': 'Navegador web', 
+    'referencias': 'Referências'
+  }
+
   return (
 
     <div className='flex'>
 
       {/* SUMÁRIO */}
-      <div className='w-48 sticky top-0 h-[100vh] border-r border-black p-4'>
-        <p>Sumário</p>
-        <p>Web</p>
-        <p>Linguagens da web</p>
-        <p>HTML</p>
-        <p>CSS</p>
-        <p>JavaScript</p>
-        <p>HTTP</p>
-        <p>Métodos HTTP</p>
-        <p>Servidor web</p>
-        <p>Servidor web estático</p>
-        <p>Servidor web dinâmico</p>
-        <p>Navegador web</p>
-        <p>Referências</p>
-      </div>
+      <Summary items={topics}/>
 
       {/* CONTEÚDO */}
       <div className='flex-1 p-4'>
+
         {/* Renderização de páginas web */}
-        <section className='my-1'>
+        <section className='my-1' id='web'>
           <h1 className='text-xl font-bold'>Web</h1>
           
           <div>
@@ -46,13 +51,13 @@ const Web = () => {
               Lins (2013, p. 24) define a Web como um espaço de rede em que as informações são documen-tos de hipertexto, ou seja, documentos que apresentam conteúdos e referências para outros con-teúdos. Essas referências podem apontar:
             </p>
 
-            <p className='paragraph'>
+            <div className='paragraph'>
               <ul className='list-disc list-inside pl-4 max-w-xl'>
                 <li>Para outro local no mesmo documento, chamados de páginas;</li>
                 <li>Para outras páginas localizadas no mesmo local de rede, chamados de sites; </li>
                 <li>Para outras páginas de outros sites.</li>
               </ul>
-            </p>  
+            </div>  
 
             <p className='paragraph'>
               Kurose e Ross (2009, p. 48) dizem que essa tecnologia foi criada entre 1989 e 1991, época em que o programador suíço Tim Berners Lee e seus companheiros haviam desenvolvido as ver-sões iniciais de quatro componentes essenciais para a Web: Hypertext markup language (HTML), Hypertext transfer protocol (HTTP), um servidor web e um navegador web. Esses componentes são cruciais para o entendimento de como a Web funciona e serão elaborados nas subseções seguintes.
@@ -63,7 +68,7 @@ const Web = () => {
         <div className='separator'/>
 
         {/* Linguagens da Web */}
-        <section className='my-1'>
+        <section className='my-1' id='linguagens_da_web'>
           <h1 className='text-xl font-bold'>Linguagens da Web</h1>
           
           <div>
@@ -75,7 +80,7 @@ const Web = () => {
         </section>
 
         {/* HTML */}
-        <section className='my-1'>
+        <section className='my-1' id='html'>
           <h1 className='text-xl font-bold'>HTML</h1>
           
           <div>
@@ -92,7 +97,7 @@ const Web = () => {
         </section>
 
         {/* CSS */}
-        <section className='my-1'>
+        <section className='my-1' id='css'>
           <h1 className='text-xl font-bold'>CSS</h1>
           
           <div>
@@ -110,7 +115,7 @@ const Web = () => {
         </section>
 
         {/* JS */}
-        <section className='my-1'>
+        <section className='my-1' id='javascript'>
           <h1 className='text-xl font-bold'>JavaScript</h1>
           
           <div>
@@ -133,7 +138,7 @@ const Web = () => {
         <div className='separator'/>
 
         {/* HTTP */}
-        <section className='my-1'>
+        <section className='my-1' id='http'>
           <h1 className='text-xl font-bold'>HTTP</h1>
           
           <div>
@@ -147,7 +152,7 @@ const Web = () => {
           </div>
         </section>
 
-        <section className='my-1'>
+        <section className='my-1' id='metodos_http'>
           <h1 className='text-xl font-bold'>Métodos HTTP</h1>
           
           <div>
@@ -166,7 +171,7 @@ const Web = () => {
         <div className='separator'/>
 
         {/* SERVIDOR WEB */}
-        <section className='my-1'>
+        <section className='my-1' id='servidor_web'>
           <h1 className='text-xl font-bold'>Servidor web</h1>
           
           <div>
@@ -175,13 +180,13 @@ const Web = () => {
               Como já foi citado anteriormente, a Web se baseia em uma comunicação de cliente e servidor. O servidor, na maioria das vezes, se trata de um computador tal como o do cliente, entretanto, com algumas particularidades. Yeager e McGrath, (1996, p. 20) descrevem os principais aspectos de um servidor web: 
             </p>
 
-            <p className='paragraph'>
+            <div className='paragraph'>
               <ul className='list-disc list-inside pl-4 max-w-xl'>
                 <li>Plataforma: se trata do hardware, sistema operacional e software de rede que fazem parte do servidor;</li>
                 <li>Software: o software que efetivamente receberá e decodificará as requisições, e, a partir destas, enviará respostas;</li>
                 <li>Informação: aquilo que o servidor efetivamente envia.</li>
               </ul>
-            </p> 
+            </div> 
 
             <p className='paragraph'>
               Um servidor deve ficar ativo de forma contínua, esperando por requisições de usuários na inter-net. Quando uma requisição é recebida, é estabelecido uma conexão entre “portas”, que são uma abstração que proporcionam um jeito simples e genérico de criar e usar conexões de rede. Estas portas determinam exatamente o tipo de recurso que está sendo requisitado, e, através des-tas, o recurso é enviado ao cliente. Desta forma, as únicas operações que um software de servi-dor web precisa, obrigatoriamente, ser capaz de realizar é a de ler e escrever em uma determina-da porta, visto que todo o processo complexo de gerenciamento de conexão de rede é escondido atrás das abstrações provenientes do sistema operacional e do software de rede, referentes a pla-taforma do servidor (Yeager; McGrath, 1996, p. 20 - 21).
@@ -196,7 +201,7 @@ const Web = () => {
         </section>
 
         {/* Servidro web estático */}
-        <section className='my-1'>
+        <section className='my-1' id='servidor_web_estatico'>
           <h1 className='text-xl font-bold'>Servidor web estático</h1>
           
           <div>
@@ -210,7 +215,7 @@ const Web = () => {
         </section>
 
         {/* Servidro web dinâmico */}
-        <section className='my-1'>
+        <section className='my-1' id='servidor_web_dinamico'>
           <h1 className='text-xl font-bold'>Servidor web dinâmico</h1>
           
           <div>
@@ -219,8 +224,7 @@ const Web = () => {
               Também existem os servidores web dinâmicos, que são servidores capazes de realizar alterações nos próprios arquivos antes que estes sejam enviados ao cliente. Estes são semelhantes aos ser-vidores Web estáticos, porém, interagem com alguns softwares adicionais, como por exemplo, um banco de dados (Servidor Web, 2024).
             </p>
 
-            {/* citação direta longa */}
-            <p className='paragraph pl-[40%] text-sm'>
+            <p className='paragraph direct-long-ref'>
               Um banco de dados é uma coleção organizada de informações - ou dados - estruturadas, normalmente armazenadas eletronica-mente em um sistema de computador. Um banco de dados é ge-ralmente controlado por um sistema de gerenciamento de banco de dados (DBMS). Juntos, os dados e o DBMS, juntamente com os aplicativos associados a eles, são chamados de sistema de ban-co de dados, geralmente abreviados para apenas banco de dados (Oracle, 2024).
             </p>
 
@@ -228,8 +232,7 @@ const Web = () => {
               Beke (2018, p. 18) complementa que, a fim de proporcionar dinamismo as páginas, os servido-res precisam se comunicar com softwares adicionais e diz que isso foi possibilitado com o sur-gimento do padrão Common Gateway Interface (CGI). 
             </p>
 
-            {/* citação direta longa */}
-            <p className='paragraph pl-[40%] text-sm'>
+            <p className='paragraph direct-long-ref'>
               [...] CGI é uma simples interface para executar programas exter-nos, softwares ou gateways em um servidor de informações de maneira independente da plataforma. Atualmente, os servidores de informações apoiados são servidores HTTP (RFC 3875, 2004, tra-dução nossa).
             </p>
 
@@ -243,7 +246,7 @@ const Web = () => {
         <div className='separator'/>
 
         {/* NAVEGADOR WEB */}
-        <section className='my-1'>
+        <section className='my-1' id='navegador_web'>
           <h1 className='text-xl font-bold'>Navegador web</h1>
           
           <div>
@@ -252,8 +255,7 @@ const Web = () => {
               Com a conceptualização da Web, ficou claro a necessidade de um software que facilitasse o acesso aos endereços dos servidores web e exibisse os conteúdos requisitados de forma intuitiva e fácil. Um navegador web tem justamente esse propósito.
             </p>
 
-            {/* citação direta longa */}
-            <p className='paragraph pl-[40%] text-sm'>
+            <p className='paragraph direct-long-ref'>
               Sua tecnologia e seu design permitiam mostrar a página de conte-údo do sítio de modo agradável e navegar entre as informações por meio das referências, os hyperlinks, campos nos quais o usuá-rio poderia clicar com um mouse para deslocar-se a outras páginas ou sítios (Lins, 2013, p. 24)
             </p>
 
@@ -273,7 +275,7 @@ const Web = () => {
         <div className='separator'/>
 
         {/* REFERENCIAS */}
-        <section className='my-1'>
+        <section className='my-1' id='referencias'>
           <h1 className='text-xl font-bold'>Referências</h1>
           
           <div>

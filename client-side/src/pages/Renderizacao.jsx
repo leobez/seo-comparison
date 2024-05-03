@@ -2,23 +2,29 @@ import React from 'react'
 
 import SSRimage from '../assets/SSR.png'
 import CSRimage from '../assets/CSR.png'
+import Summary from '../components/Summary'
 
 const Renderizacao = () => {
+
+  const topics = {
+    'renderizacao': "Renderização de páginas",
+    'ssr': "SSR",
+    'csr': "CSR",
+    'como_impacta_seo': "Como impacta SEO",
+    'referencias': 'Referências', 
+  }
+
   return (
     <div className='flex'>
 
-      <div className='w-48 sticky top-0 h-[100vh] border-r border-black p-4'>
-        <p>Sumário</p>
-        <p>Renderização de páginas web</p>
-        <p>SSR</p>
-        <p>CSR</p>
-        <p>Como a renderização pode impactar SEO</p>
-        <p>Referências</p>
-      </div>
+      {/* SUMÁRIO */}
+      <Summary items={topics}/>
 
+      {/* CONTEÚDO */}
       <div className='flex-1 p-4'>
+
         {/* Renderização de páginas web */}
-        <section className='my-1'>
+        <section className='my-1' id='renderizacao'>
           <h1 className='text-xl font-bold'>Renderização de páginas web</h1>
           
           <div>
@@ -34,7 +40,7 @@ const Renderizacao = () => {
         <div className='separator'/>
 
         {/* SSR */}
-        <section className='my-1'>
+        <section className='my-1' id='ssr'>
           <h1 className='text-xl font-bold'>SSR</h1>
           
           <div>
@@ -56,23 +62,23 @@ const Renderizacao = () => {
             <p className='paragraph'>
               <span className='reference'>Vega (2017)</span> determina algumas vantagens e desvantagens para a abordagem SSR. Dentre as vantagens, destacam-se: 
             </p>
-            <p className='paragraph'>
+            <div className='paragraph'>
               <ul className='list-disc list-inside pl-4 max-w-xl'>
                 <li>Melhor SEO;</li>
                 <li>Carregamento inicial da página mais rápido.</li>
               </ul>
-            </p>  
+            </div>  
 
             <p className='paragraph'>
               Já dentre as desvantagens, destacam-se:
             </p>
-            <p className='paragraph'>
+            <div className='paragraph'>
               <ul className='list-disc list-inside pl-4 max-w-xl'>
                 <li>Maior número de requisições são feitas;</li>
                 <li>Uma renderização mais lenta no geral;</li>
                 <li>Páginas são recarregadas por inteiras.</li>
               </ul>
-            </p>  
+            </div>  
 
           </div>
 
@@ -81,7 +87,7 @@ const Renderizacao = () => {
         <div className='separator'/>
 
         {/* CSR */}
-        <section className='my-1'>
+        <section className='my-1' id='csr'>
           <h1 className='text-xl font-bold'>CSR</h1>
           
           <div>
@@ -107,22 +113,22 @@ const Renderizacao = () => {
             <p className='paragraph'>
               <span className='reference'>Vega (2017)</span> determina algumas vantagens e desvantagens para CSR. Dentre as vantagens, des-tacam-se:  
             </p>
-            <p className='paragraph'>
+            <div className='paragraph'>
               <ul className='list-disc list-inside pl-4 max-w-xl'>
                 <li>Interação mais “rica” com o site;</li>
                 <li>Renderização mais rápida após o carregamento inicial.</li>
               </ul>
-            </p>  
+            </div>  
 
             <p className='paragraph'>
               Já dentre as desvantagens, destacam-se:
             </p>
-            <p className='paragraph'>
+            <div className='paragraph'>
               <ul className='list-disc list-inside pl-4 max-w-xl'>
                 <li>SEO fraca, caso não implementado corretamente;</li>
                 <li>Carregamento inicial mais lento.</li>
               </ul>
-            </p>  
+            </div>  
 
           </div>
 
@@ -131,7 +137,7 @@ const Renderizacao = () => {
         <div className='separator'/>
 
         {/* Como a renderização pode impactar SEO */}
-        <section className='my-1'>
+        <section className='my-1' id='como_impacta_seo'>
           <h1 className='text-xl font-bold'>Como a renderização pode impactar SEO</h1>
           
           <div>
@@ -144,27 +150,26 @@ const Renderizacao = () => {
               O fator mais aparente, e possivelmente principal para isto ocorrer é o da compatibilidade com motores de busca. <span className='reference'>Beke (2018, p. 29)</span> menciona como que os robôs, comumente chamados de <span className='italic'>crawlers</span>, de certos motores de busca não são capazes de renderizar código JS, dessa forma, prejudicando a indexação do conteúdo de sites CSR. Esse ponto é ainda complementado por <span className='reference'>Sydorkina (2023)</span>, que diz que que sites SSR são mais “amigáveis” para SEO, visto que estes já apresentam suas informações no formato de texto assim que chegam ao cliente, os tornando legíveis para motores de busca. Sendo assim, “compatibilidade com motores de busca” pode ser classificado como um dos fatores impactados pela escolha entre SSR e CSR e que pode afetar SEO. Mas esse não necessariamente é o único fator. Como foi mencionado por <span className='reference'>Vega (2017)</span>, sites CSR possuem um carregamento inicial mais lento. Isso ocorre pois o navegador precisa fazer o download de todo o arquivo JS para apenas então exibir o conteúdo na página. Entretanto, o mesmo cita que sites CSR apresentam um carregamento mais rápido após o carregamento inicial, além de estes apresentam interações mais “ricas” para os usuários. Esses aspectos, que são voltados para desempenho e usabilidade, também são relevantes para SEO, ao menos, após o surgimento das <span className='italic'>Web Vitals </span> (Métricas da web).
             </p>
 
-            {/* citação direta longa */}
-            <p className='paragraph pl-[40%] text-sm'>
+            <p className='paragraph direct-long-ref'>
               As Métricas da Web são uma iniciativa do Google para fornecer orientações unificadas para indicadores de qualidade da página da web que são essenciais para oferecer uma ótima experiência do usuário na Web. O objetivo é simplificar a ampla variedade de ferramentas de medição de desempenho disponíveis e ajudar os pro-prietários de sites a se concentrar nas métricas mais importantes, as Core Web Vitals <span className='reference'>(Walton, 2024)</span>.
             </p>
 
             <p className='paragraph'>
               <span className='reference'>Maulidina M. (2024)</span> diz que esse conjunto de métricas, primordialmente, era usado como um indicador de ranqueamento apenas para dispositivos móveis, entretanto, eventualmente, passou a ser usado para o ranqueamento em desktops também, tornando-se um conjunto de métricas fundamental para SEO. As três principais métricas, denominadas <span className='italic'>Core Web Vitals</span> são:
             </p>
-            <p className='paragraph'>
+            <div className='paragraph'>
               <ul className='list-disc list-inside pl-4 max-w-xl'>
                 <li><span className='italic'>Largest Content Paint</span> (LCP);</li>
                 <li><span className='italic'>Interaction to Next Paint</span> (INP);</li>
                 <li><span className='italic'>Cumulative Layout Shift</span> (CLS).</li>
               </ul>
-            </p>  
+            </div>  
 
             <p className='paragraph'>
               Ademais, outras métricas que não fazem parte das Core Web Vitals, mas ainda assim são relevantes para experiência do usuário, também são mencionadas: 
             </p>
 
-            <p className='paragraph'>
+            <div className='paragraph'>
               <ul className='list-disc list-inside pl-4 max-w-xl'>
                 <li><span className='italic'>First Input Delay</span> (FID);</li>
                 <li><span className='italic'>Speed Index</span> (SI);</li>
@@ -173,7 +178,7 @@ const Renderizacao = () => {
                 <li><span className='italic'>Total Blocking Time</span> (TBT);</li>
                 <li><span className='italic'>Time to First Byte</span> (TTFB).</li>
               </ul>
-            </p>
+            </div>
 
             <p className='paragraph'>
               Cada uma dessas métricas mede algo relevante para o desempenho e usabilidade de uma página web, e pelo fato de que SSR e CSR podem impactar o desempenho e usabilidade de uma página, como a velocidade de carregamento ou capacidade de interatividade dessa, é possível que os valores dessas métricas sejam afetados, o que pode impactar SEO.
@@ -187,7 +192,7 @@ const Renderizacao = () => {
               Através de dados de <span className='reference'>StatCounter (2024)</span>, é possível visualizar que o Google é o mecanismo de busca mais utilizado, com 91.37% de fatia do mercado mundial. Além disso, a Google oferece uma boa noção dos fatores que esta considera como relevantes para o ranqueamento de sites. Em <span className='reference'>(Classificando resultados, 2024)</span>, a Google determina que os seguintes são levados em consideração para determinar a classificação de um site em uma busca: 
             </p>
 
-            <p className='paragraph'>
+            <div className='paragraph'>
               <ul className='list-disc list-inside pl-4 max-w-xl'>
                 <li>Significado da consulta;</li>
                 <li>Relevância do conteúdo;</li>
@@ -195,7 +200,7 @@ const Renderizacao = () => {
                 <li>Usabilidade das páginas Web;</li>
                 <li>Contexto e configurações.</li>
               </ul>
-            </p>
+            </div>
 
             <p className='paragraph'>
               Percebe-se que a maior parte desses fatores não possuem relação direta com a abordagem de renderização utilizada em um site, isto é, se este utiliza SSR ou CSR. Os fatores de “relevância do conteudo” e “qualidade do conteúdo” estão relacionados ao conteúdo em si, ou seja, as informações apresentadas no site. Já os fatores de “significado da consulta” e “contexto e configurações” estão relacionadas ao usuário, isto é, o que foi pesquisado pelo usuário e quais são as configurações e contexto deste, por exemplo: localização geográfica. Resta então o fator de usabilidade das páginas web, que, como já foi determinado, é algo que pode ser afetado pela escolha entre SSR e CSR.
@@ -205,12 +210,12 @@ const Renderizacao = () => {
               Determina-se então que os fatores influentes para SEO e que podem ser impactados pela escolha entre SSR e CSR, são:
             </p>
           
-            <p className='paragraph'>
+            <div className='paragraph'>
               <ul className='list-disc list-inside pl-4 max-w-xl'>
                 <li>Compatibilidade com motores de busca;</li>
                 <li>Desempenho e usabilidade do site.</li>
               </ul>
-            </p>
+            </div>
 
           </div>
 
@@ -219,7 +224,7 @@ const Renderizacao = () => {
         <div className='separator'/>
 
         {/* Referências */}
-        <section className='my-1'>
+        <section className='my-1' id='referencias'>
           <h1 className='text-xl font-bold'>Referências</h1>
           
           <div>

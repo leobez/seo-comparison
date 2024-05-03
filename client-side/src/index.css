@@ -16,8 +16,12 @@
   }
 }
 
+body, html {
+  scroll-behavior: smooth;
+}
+
 body {
-  color: rgb(var(--foreground-rgb));
+  /* color: rgb(var(--foreground-rgb)); */
   height: 100vh;
 }
 
@@ -26,16 +30,6 @@ body {
     text-wrap: balance;
   }
 
-  .nav-item {
-    display: grid;
-    place-items: center;
-    padding: 0.25rem;
-    margin: 0px 0.70rem; 
-    transition: 0.3s;
-    --tw-bg-opacity: 1;
-    border-bottom: 2px solid rgb(2 6 23 / var(--tw-bg-opacity));
-    cursor: pointer;
-  } 
   .nav-item:hover {
     --tw-bg-opacity: 1;
     border-color: rgb(226 232 240 / var(--tw-text-opacity));
@@ -49,6 +43,27 @@ body {
 
   .outer-link {
     font-weight: bold;
+  }
+
+  .paragraph {
+    text-align: justify;
+    margin: 1rem 0;
+  }
+
+}
+
+@layer base {
+  .nav-item {
+    @apply grid place-items-center py-1 transition-all duration-300 w-full
+  }
+  .active {
+    @apply border-b-2 border-black font-bold w-full text-center
+  }
+  .nav-hover {
+    @apply text-center w-full hover:border-b-2 border-black
+  }
+  .direct-long-ref {
+    @apply pl-[40%] text-sm
   }
 
 

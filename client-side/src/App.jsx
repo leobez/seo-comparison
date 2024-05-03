@@ -1,11 +1,12 @@
 import './App.css'
-import { BrowserRouter, Link, Route, Routes } from 'react-router-dom'
+import { BrowserRouter, Route, Routes } from 'react-router-dom'
 import Home from './pages/Home'
 import Page404 from './pages/Page404'
-import SEO from './pages/SEO'
+import Seo from './pages/Seo'
 import Renderizacao from './pages/Renderizacao'
 import Media from './pages/Media'
 import Web from './pages/Web'
+import Navbar from './components/Navbar'
 
 function App() {
 
@@ -14,7 +15,7 @@ function App() {
 
       <BrowserRouter>
 
-        <header className="h-20 bg-slate-950 grid place-items-center">
+        <header className="h-20 bg-slate-950 grid place-items-center lg:disabled">
 
           <div className="w-10/12 flex justify-between">
 
@@ -23,26 +24,20 @@ function App() {
               <p className=" text-slate-400">Este site é CSR</p>
             </div>
 
-            <nav className="border-2 border-slate-200 grid p-1">
-              <ul className="flex text-slate-200 p-1">
-                <li className="nav-item"><Link to="/">Home</Link></li>
-                <li className="nav-item"><Link to="/web">Web</Link></li>
-                <li className="nav-item"><Link to="/seo">SEO</Link></li>
-                <li className="nav-item"><Link to="/render">Renderização</Link></li>
-                <li className="nav-item"><Link to="/media">Mídia</Link></li>
-              </ul>
-            </nav>
-
           </div>
 
         </header>
+
+        <div className='w-full grid place-items-center bg-slate-200 h-14'>
+          <Navbar/>
+        </div>
 
         <div className="max-h-full w-full flex justify-center bg-slate-200 flex-1 min-h-0">
           <div className="max-w-5xl xl:min-w-[1024px] bg-white shadow-lg">
             <Routes>
               <Route path='/' element={<Home/>}></Route>
               <Route path='/web' element={<Web/>}></Route>
-              <Route path='/seo' element={<SEO/>}></Route>
+              <Route path='/seo' element={<Seo/>}></Route>
               <Route path='/render' element={<Renderizacao/>}></Route>
               <Route path='/media' element={<Media/>}></Route>
               <Route path='*' element={<Page404/>}></Route>
