@@ -10,6 +10,7 @@ const Home = () => {
 
         {/* Intro */}
         <section className='my-1' id='intro'>
+          
           <h1 className='text-xl font-bold'>Comparação de SEO em sites SSR e CSR</h1>
           
           <div>
@@ -26,7 +27,11 @@ const Home = () => {
             </div>  
 
             <p className='paragraph'>
-              Sendo assim é necessário testar ambos esses aspectos tanto em um site SSR quanto em um CSR, a fim de determinar o impacto que a abordagem escolhida causa em SEO.
+              Sendo assim, é necessário testar esses aspectos tanto em um site SSR quanto em um CSR para determinar o impacto que a abordagem escolhida causa em SEO.
+            </p>
+
+            <p className='paragraph'>
+              Esse site faz parte do teste de compatibilidade.
             </p>
 
           </div>
@@ -41,15 +46,11 @@ const Home = () => {
           <div>
 
             <p className='paragraph'>
-              O teste de compatibilidade será feito utilizando duas versões desse site: uma SSR e outra CSR.
+              O teste de compatibilidade consiste em determinar se um motor de busca é compativel com conteudos renderizados através de JS, isto é, se este é capaz de, sem problemas, processar e indexar esses tipos de conteudo. 
             </p>
 
             <p className='paragraph'>
-              O site SSR realiza a renderização de todo seu conteudo no lado do servidor antes de ser enviado ao cliente, enquanto o site CSR possui todo seu conteudo renderizado no lado do cliente através da execução de código JavaScript. <Link to='/render'><span className='hover:underline'>Veja mais detalhes aqui.</span></Link>
-            </p>
-
-            <p className='paragraph'>
-              Ambos os sites serão publicados na Web e então serão indexados nos seguintes motores de busca. 
+              Os motores de busca considerados foram esses: 
             </p>
 
             <div className='paragraph'>
@@ -59,49 +60,19 @@ const Home = () => {
                 <li>Yahoo!;</li>
                 <li>Yandex;</li>
                 <li>Baidu;</li>
-                <li>DuckDuckGo;</li>
+                <li>DuckDuckGo.</li>
               </ul>
-            </div>  
-
+            </div> 
+            
             <p className='paragraph'>
-              Com os sites indexados será possível documentar quaisquer problemas de compatibilidade desses motores com contudo renderizado através de código JavaScript. Dessa forma, será possível obter uma boa noção da compatibilidade geral da Web com sites CSR. 
+              Para cada um desses motores, dois sites similares, um SSR e um CSR (esse) foram indexados.
             </p>
 
             <p className='paragraph'>
-              
+              Com os sites indexados, é possível visualizar se houve algum problema com relação ao processamento e indexação do conteúdo desses.
             </p>
 
           </div>
-        </section>
-
-        <div className='separator'/>
-
-        {/* Usabilidade e desempenho */}
-        <section className='my-1' id='usabilidade_desempenho'>
-          <h1 className='text-xl font-bold'>Testes de usabilidade e desempenho</h1>
-          
-          <div>
-            <p className='paragraph'>
-              Desempnho e usabilidade serão mesurados através das seguintes métricas:
-            </p>
-          </div>
-
-          <div className='paragraph'>
-            <ul className='list-disc list-inside pl-4 max-w-xl'>
-              <li><span className='italic'>Largest Content Paint</span> (LCP);</li>
-              <li><span className='italic'>Interaction to Next Paint</span> (INP);</li>
-              <li><span className='italic'>Cumulative Layout Shift</span> (CLS);</li>
-              <li><span className='italic'>Speed Index</span> (SI);</li>
-              <li><span className='italic'>First Contentful Paint </span> (FCP);</li>
-              <li><span className='italic'>Total Blocking Time</span> (TBT);</li>
-              <li><span className='italic'>Time to First Byte</span> (TTFB).</li>
-            </ul>
-          </div> 
-
-          <p className='paragraph'>
-            Ao testar todas essas métricas em um site SSR e um CSR será possível obter uma boa noção do impacto que a abordagem de renderização causa no desempnho e usabilidade de um site. <Link to='/render#como_impacta_seo'><span className='hover:underline'>Veja mais detalhes aqui.</span></Link>
-          </p> 
-
         </section>
 
       </div>

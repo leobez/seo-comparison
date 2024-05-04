@@ -4,7 +4,6 @@ import Home from './pages/Home'
 import Page404 from './pages/Page404'
 import Seo from './pages/Seo'
 import Renderizacao from './pages/Renderizacao'
-import Contato from './pages/Contato'
 import Web from './pages/Web'
 import Navbar from './components/Navbar'
 
@@ -39,7 +38,6 @@ function App() {
               <Route path='/web' element={<Web/>}></Route>
               <Route path='/seo' element={<Seo/>}></Route>
               <Route path='/render' element={<Renderizacao/>}></Route>
-              <Route path='/contact' element={<Contato/>}></Route>
               <Route path='*' element={<Page404/>}></Route>
             </Routes>
           </div>

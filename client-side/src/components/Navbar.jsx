@@ -42,15 +42,6 @@ const Navbar = () => {
                     </NavLink>
                 </li>
 
-                <li className='nav-item'>
-                    <NavLink to="/contact"  
-                        className={({isActive, isPending}) => 
-                            isPending ? 'pending' : isActive ? 'active' : 'nav-hover'
-                        }>
-                        Contato
-                    </NavLink>
-                </li>
-
             </ul>
         </nav>
     )
