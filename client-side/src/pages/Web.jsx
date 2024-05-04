@@ -87,7 +87,7 @@ const Web = () => {
             </p>
             <div className='paragraph flex flex-col gap-1 items-center'>
               <p className='text-center'>Exemplo de código HTML</p>
-              <img src={HTMLimage} alt="Sequência de renderização do lado do servidor" className='min-w-[200px] min-h-[200px]'/>
+              <img src={HTMLimage} alt="HTML" className='min-w-[200px] min-h-[200px]'/>
               <p className='text-center'>Fonte: <span className='reference'>(W3Schools, 2024)</span></p>
             </div>
           </div>
@@ -105,7 +105,7 @@ const Web = () => {
             </p>
             <div className='paragraph flex flex-col gap-1 items-center'>
               <p className='text-center'>Exemplo de código CSS</p>
-              <img src={CSSimage} alt="Sequência de renderização do lado do servidor" className='min-w-[200px] min-h-[200px]'/>
+              <img src={CSSimage} alt="CSS" className='min-w-[200px] min-h-[200px]'/>
               <p className='text-center'>Fonte: <span className='reference'>(W3Schools, 2024)</span></p>
             </div>
           </div>
