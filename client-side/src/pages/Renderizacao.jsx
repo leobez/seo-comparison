@@ -51,7 +51,7 @@ const Renderizacao = () => {
 
             <div className='paragraph flex flex-col gap-1 items-center'>
               <p className='text-center'>Sequência de renderização do lado do servidor</p>
-              <img src={SSRimage} alt="Sequência de renderização do lado do servidor" className='w-3/4'/>
+              <img src={SSRimage} alt="Sequência de renderização do lado do servidor" className='sm:w-full lg:w-4/5'/>
               <p className='text-center'>Fonte: <span className='reference'>(Beke, 2018, p. 15)</span></p>
             </div>
 
@@ -98,7 +98,7 @@ const Renderizacao = () => {
 
             <div className='paragraph flex flex-col gap-1 items-center'>
               <p className='text-center'>Sequência de renderização do lado do cliente</p>
-              <img src={CSRimage} alt="Sequência de renderização do lado do servidor" className='w-3/4'/>
+              <img src={CSRimage} alt="Sequência de renderização do lado do servidor" className='sm:w-full lg:w-4/5'/>
               <p className='text-center'>Fonte: <span className='reference'>(Beke, 2018, p. 16)</span></p>
             </div>
 

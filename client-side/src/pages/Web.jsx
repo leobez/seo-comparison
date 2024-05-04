@@ -2,7 +2,6 @@ import React from 'react'
 
 import HTMLimage from '../assets/html.png'
 import CSSimage from '../assets/css.png'
-import HTTPmethods from '../assets/métodos_HTTP.png'
 
 import Summary from '../components/Summary'
 
@@ -15,7 +14,6 @@ const Web = () => {
     'css': 'CSS', 
     'javascript': 'JavaScript', 
     'http': 'HTTP', 
-    'metodos_http': 'Métodos HTTP', 
     'servidor_web': 'Servidor web', 
     'servidor_web_estatico':'Servidor web estático', 
     'servidor_web_dinamico': 'Servidor web dinâmico', 
@@ -25,13 +23,13 @@ const Web = () => {
 
   return (
 
-    <div className='flex'>
+    <div className='flex relative'>
 
       {/* SUMÁRIO */}
       <Summary items={topics}/>
 
       {/* CONTEÚDO */}
-      <div className='flex-1 p-4'>
+      <div className='flex-1 p-4 z-10'>
 
         {/* Renderização de páginas web */}
         <section className='my-1' id='web'>
@@ -89,7 +87,7 @@ const Web = () => {
             </p>
             <div className='paragraph flex flex-col gap-1 items-center'>
               <p className='text-center'>Exemplo de código HTML</p>
-              <img src={HTMLimage} alt="Sequência de renderização do lado do servidor" className='w-1/4'/>
+              <img src={HTMLimage} alt="Sequência de renderização do lado do servidor" className='min-w-[200px] min-h-[200px]'/>
               <p className='text-center'>Fonte: <span className='reference'>(W3Schools, 2024)</span></p>
             </div>
           </div>
@@ -107,7 +105,7 @@ const Web = () => {
             </p>
             <div className='paragraph flex flex-col gap-1 items-center'>
               <p className='text-center'>Exemplo de código CSS</p>
-              <img src={CSSimage} alt="Sequência de renderização do lado do servidor" className='w-1/4'/>
+              <img src={CSSimage} alt="Sequência de renderização do lado do servidor" className='min-w-[200px] min-h-[200px]'/>
               <p className='text-center'>Fonte: <span className='reference'>(W3Schools, 2024)</span></p>
             </div>
           </div>
@@ -144,27 +142,8 @@ const Web = () => {
           <div>
 
             <p className='paragraph'>
-              HTTP é a base de qualquer troca de dados na Web. Se trata do protocolo que permite a obten-ção de recursos, como documentos de hipertexto, imagens, vídeos, scripts entre outros, através de uma comunicação cliente-servidor. As mensagens enviadas pelo cliente, geralmente um na-vegador, são chamadas de solicitações ou requisições, enquanto as mensagens que o servidor envia para o cliente são chamadas de respostas (HTTP, 2024). 
+              HTTP é a base de qualquer troca de dados na Web. Se trata do protocolo que permite a obten-ção de recursos, como documentos de hipertexto, imagens, vídeos, scripts entre outros, através de uma comunicação cliente-servidor. As mensagens enviadas pelo cliente, geralmente um na-vegador, são chamadas de solicitações ou requisições, enquanto as mensagens que o servidor envia para o cliente são chamadas de respostas (HTTP, 2024). Para realizar uma requisição é necessário especificar o propósito dessa. Isto é feito através dos métodos HTTP, como os méto-dos GET e POST, que são utilizadas para recuperação e processamento de alguma informação, respectivamente, além de outros métodos (RFC 9110, 2022).
             </p>
-            <p className='paragraph'>
-              Adicionalmente, para maior entendimento dessa tecnologia é importante esclarecer os métodos HTTP, que serão elaborados na subseção seguinte.
-            </p>
-          </div>
-        </section>
-
-        <section className='my-1' id='metodos_http'>
-          <h1 className='text-xl font-bold'>Métodos HTTP</h1>
-          
-          <div>
-
-            <p className='paragraph'>
-              A RFC 9110 (2022) menciona que os métodos HTTP são a fonte primária de identificação do propósito de uma requisição. Estas consistem em tokens, cada um com seu propósito, como é exibido na figura a seguir.
-            </p>
-            <div className='paragraph flex flex-col gap-1 items-center'>
-              <p className='text-center'>Métodos HTTP</p>
-              <img src={HTTPmethods} alt="Sequência de renderização do lado do servidor" className='w-3/4'/>
-              <p className='text-center'>Fonte: <span className='reference'>(RFC 9110, 2022)</span></p>
-            </div>
           </div>
         </section>
 
@@ -200,7 +179,7 @@ const Web = () => {
 
         </section>
 
-        {/* Servidro web estático */}
+        {/* Servidor web estático */}
         <section className='my-1' id='servidor_web_estatico'>
           <h1 className='text-xl font-bold'>Servidor web estático</h1>
           
@@ -214,7 +193,7 @@ const Web = () => {
           
         </section>
 
-        {/* Servidro web dinâmico */}
+        {/* Servidor web dinâmico */}
         <section className='my-1' id='servidor_web_dinamico'>
           <h1 className='text-xl font-bold'>Servidor web dinâmico</h1>
           
