@@ -26,7 +26,7 @@ const Summary = ({items}) => {
                 <div className='font-bold text-lg'>Sumário</div>
                 <hr />
                 <div>
-                    <ul className='flex flex-col'>
+                    <ul className='flex flex-col text-sm'>
                         {items && Object.entries(items).map((item) => (
                             <li key={item[0]} className='hover:bg-slate-300 h-10'>
                                 <a href={`#${item[0]}`} className='h-full w-full flex items-center px-1'>
@@ -42,7 +42,7 @@ const Summary = ({items}) => {
                 <div className='font-bold text-lg'>Sumário</div>
                 <hr />
                 <div>
-                    <ul className='flex flex-col'>
+                    <ul className='flex flex-col text-sm'>
                         {items && Object.entries(items).map((item) => (
                             <li key={item[0]} className='hover:bg-slate-300 h-10'>
                                 <a href={`#${item[0]}`} className='h-full w-full flex items-center px-1'>

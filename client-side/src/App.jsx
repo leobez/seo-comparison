@@ -27,7 +27,7 @@ function App() {
 
         </header>
 
-        <div className='w-full grid place-items-center bg-slate-200'>
+        <div className='w-full h-12 grid place-items-center bg-slate-200'>
           <Navbar/>
         </div>
 

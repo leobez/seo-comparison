@@ -1,5 +1,4 @@
 import React from 'react'
-import Image from 'next/image'
 
 const Web = () => {
 
@@ -12,7 +11,7 @@ const Web = () => {
           <div className='font-bold text-lg'>Sumário</div>
           <hr />
           <div>
-              <ul className='flex flex-col'>
+              <ul className='flex flex-col text-sm'>
                 <li className='hover:bg-slate-300 h-10'><a href='#web' className='h-full w-full flex items-center px-1'>Web</a></li>
                 <li className='hover:bg-slate-300 h-10'><a href='#linguagens_da_web' className='h-full w-full flex items-center px-1'>Linguagens da Web</a></li>
                 <li className='hover:bg-slate-300 h-10'><a href='#html' className='h-full w-full flex items-center px-1'>HTML</a></li>
