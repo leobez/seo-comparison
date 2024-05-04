@@ -18,10 +18,9 @@ export default function RootLayout({ children }) {
 
       <body className={inter.className}>
 
-        <div className="h-full flex flex-col">
+        <div className='flex flex-col min-h-screen'>
 
-          <header className="flex-none h-20 bg-slate-950 grid place-items-center">
-
+          <header className="h-20 bg-slate-950 grid place-items-center ">
             <div className="w-10/12 flex justify-between">
 
               <div className="flex flex-col gap-2">
@@ -29,39 +28,29 @@ export default function RootLayout({ children }) {
                 <p className=" text-slate-400">Este site é SSR</p>
               </div>
 
-              <nav className="border-2 border-slate-200 grid p-1">
-                <ul className="flex text-slate-200 p-1">
-                  <li className="nav-item"><a href="/">Home</a></li>
-                  <li className="nav-item"><a href="/page1">Page1</a></li>
-                  <li className="nav-item"><a href="/page2">Page2</a></li>
-                  <li className="nav-item"><a href="/page3">Page3</a></li>
-                  <li className="nav-item"><a href="/page4">Page4</a></li>
-                </ul>
-              </nav>
-
             </div>
-
           </header>
 
-          <div className="max-h-full flex-grow w-full flex justify-center bg-slate-200">
-            <div className="max-w-6xl min-w-[1152px] bg-white p-4 shadow-lg">
+          <div className='w-full grid place-items-center bg-slate-200'>
+            <nav className=" border-black border-b grid p-1 w-full place-items-center bg-white max-w-5xl text-sm lg:text-base">
+              <ul className="flex text-slate-800 p-1 justify-between w-full gap-1">
+                  <li className="nav-item"><a href="/">Home</a></li>
+                  <li className="nav-item"><a href="/web">Web</a></li>
+                  <li className="nav-item"><a href="/seo">Seo</a></li>
+                  <li className="nav-item"><a href="/render">Renderização</a>
+                </li>
+              </ul>
+            </nav>
+          </div>
+
+          <div className="max-h-full w-full flex justify-center bg-slate-200 flex-1 min-h-0">
+            <div className="max-w-5xl xl:min-w-[1024px] bg-white shadow-lg ">
               {children}
             </div>
           </div>
 
-          <footer className="flex-none h-20 bg-slate-950 grid place-items-center">
-
-            <div className="w-10/12 flex justify-between">
-              <div className="flex flex-col gap-2">
-                <p className="text-slate-200 text-xl font-bold">SSR e CSR</p>
-                <p className=" text-slate-400">Este site é SSR</p>
-              </div>
-
-              <div className="grid place-items-center">
-                <p className="text-slate-200 font-bold">Leonardo de Souza Bezerra</p>
-              </div>
-            </div>
-
+          <footer className="h-20 bg-slate-950 flex items-center p-4">
+            <p className="text-slate-200 font-bold">Leonardo de Souza Bezerra</p>
           </footer>
 
         </div>
