@@ -5,8 +5,8 @@ import "./globals.css";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata = {
-  title: "server side",
-  description: "Server side app",
+  title: "SEO testing",
+  description: "Site para teste de SEO. Entenda o básico da Web, como motores de busca funcionam, o que é SEO e como as abordagens SSR e CSR podem impactá-la.",
 };
 
 export default function RootLayout({ children }) {
