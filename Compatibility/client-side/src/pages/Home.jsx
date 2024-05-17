@@ -59,7 +59,6 @@ const Home = () => {
                 <li>Bing;</li>
                 <li>Yahoo!;</li>
                 <li>Yandex;</li>
-                <li>Baidu;</li>
                 <li>DuckDuckGo.</li>
               </ul>
             </div> 
@@ -69,7 +68,7 @@ const Home = () => {
             </p>
 
             <p className='paragraph'>
-              Com os sites indexados, é possível visualizar se houve algum problema com relação ao processamento e indexação do conteúdo desses.
+              Com os sites indexados é possível testar se todo conteúdo foi, de fato, indexado corretamente.
             </p>
 
           </div>

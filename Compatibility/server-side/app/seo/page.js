@@ -42,7 +42,7 @@ const Seo = () => {
             </p>
 
             <p className='paragraph'> 
-              Por fim, na etapa de busca, que geralmente é feita através de uma interface, é possível que usuá-rios formulem uma consulta com o uso de palavras chaves ou até mesmo de linguagem natural, que será utilizada pelo motor de busca propriamente dito, que se trata do programa que irá loca-lizar os itens na base de dados que devem constituir a resposta <span className='reference'>(Cendón, 2001, p. 41)</span>. 
+              Por fim, na etapa de busca, que geralmente é feita através de uma interface, é possível que usuários formulem uma consulta com o uso de palavras chaves ou até mesmo de linguagem natural, que será utilizada pelo motor de busca propriamente dito, que se trata do programa que irá localizar os itens na base de dados que devem constituir a resposta <span className='reference'>(Cendón, 2001, p. 41)</span>. 
             </p>
 
           </div>
@@ -61,11 +61,11 @@ const Seo = () => {
             </p>
 
             <p className='paragraph'>
-              Para garantir um padrão de qualidade nos sites que são exibidos nas listas de resultados, os mo-tores de busca avaliam certos aspectos desses sites a fim de determinar suas pontuações de qua-lidade, que por fim irão determinar suas posições nas listas de resultados. Esses aspectos, podem ser, por exemplo: conteudo, usabilidade, acessibilidade e estrutura da página, entre diversos outros <span className='reference'>(Ledford, 2008, p. 10)</span>.
+              Para garantir um padrão de qualidade nos sites que são exibidos nas listas de resultados, os motores de busca avaliam certos aspectos desses sites a fim de determinar suas pontuações de qualidade, que por fim irão determinar suas posições nas listas de resultados. Esses aspectos, podem ser, por exemplo: conteudo, usabilidade, acessibilidade e estrutura da página, entre diversos outros <span className='reference'>(Ledford, 2008, p. 10)</span>.
             </p>
 
             <p className='paragraph'>
-              A exata forma como esses aspectos influenciam na posição final de um site é algo que apenas o criador do algoritmo específico utilizado pelo motor de busca sabe, mas uma coisa é certa: quan-to maior for a pontuação de qualidade de um site, melhor serão seus resultados nos motores de busca <span className='reference'>(Ledford, 2008, p. 10-11)</span>.  É justamente para isto que serve SEO. <span className='reference'>Yalçın e Köse (2010, p. 488)</span> definem SEO como o processo de fazer com que sites apareçam no topo da lista de re-sultados nos motores de busca. E isto é algo muito importante, visto que, segundo alguns dados de <span className='reference'>Dean (2023)</span>: 
+              A exata forma como esses aspectos influenciam na posição final de um site é algo que apenas o criador do algoritmo específico utilizado pelo motor de busca sabe, mas uma coisa é certa: quanto maior for a pontuação de qualidade de um site, melhor serão seus resultados nos motores de busca <span className='reference'>(Ledford, 2008, p. 10-11)</span>.  É justamente para isto que serve SEO. <span className='reference'>Yalçın e Köse (2010, p. 488)</span> definem SEO como o processo de fazer com que sites apareçam no topo da lista de resultados nos motores de busca. E isto é algo muito importante, visto que, segundo alguns dados de <span className='reference'>Dean (2023)</span>: 
             </p>
 
             <div className='paragraph'>
@@ -93,23 +93,23 @@ const Seo = () => {
           <div>
 
             <p className='paragraph'>
-              Cendón
+              	Cendón, Beatriz Valadares. Ferramentas de busca na Web. Ciência da informação, Brasília, vol. 30, n. 1, jun. 2001, p. 39-49 [ISSN 1518-8353]. Disponível em: <a href="https://revista.ibict.br/ciinf/article/view/937/974" target='_blank' className='text-blue-800'>https://revista.ibict.br/ciinf/article/view/937/974</a>. Acesso em: 08 mai, 2024 às 21:50min. 
             </p>
 
             <p className='paragraph'>
-              Seymour, Frantsvog e Kumar
+              Seymour, Joseph Tom; Frantsvog, Dean; Kumar, Satheesh. History Of Search Engines. International journal of management & information systems, vol. 15, n. 4, set. 2011 [ISSN 2157-9628]. Disponível em: <a href="https://www.researchgate.net/publication/265104813_History_Of_Search_Engines" target='_blank' className='text-blue-800'>https://www.researchgate.net/publication/265104813_History_Of_Search_Engines</a>. Acesso em: 12 mai, 2024 às 10:11min.
             </p>
 
             <p className='paragraph'>
-              Ledford
+              Ledford, Jerri L. Search Engine Optimization Bible (5ª edição). John Wiley & Sons, 2015. Disponível em: <a href="https://books.google.com.br/books?id=sgmxo1Alq_4C&printsec=frontcover" target='_blank' className='text-blue-800'>https://books.google.com.br/books?id=sgmxo1Alq_4C&printsec=frontcover</a>. Acesso em: 08 mai, 2024 às 21:57min.
             </p>
 
             <p className='paragraph'>
-              Yalçın e Köse
+              Yalçın, Nursel; Köse Utku. What is search engine optimization: SEO? Procedia: social & behavioral sciences, Vol. 9, Out. 2010, p. 487-493 [ISSN 1877-0428]. Disponível em: <a href="https://www.sciencedirect.com/science/article/pii/S1877042810022901" target='_blank' className='text-blue-800'>https://www.sciencedirect.com/science/article/pii/S1877042810022901</a>. Acesso em: 08 mai, 2024 às 22:03min. 
             </p>
 
             <p className='paragraph'>
-              Dean
+              Dean, Brian. We analyzed 4 million Google Search Results: Here's What We Learned About Organic Click Through Rate. 2023. Disponível em: <a href="https://backlinko.com/google-ctr-stats" target='_blank' className='text-blue-800'>https://backlinko.com/google-ctr-stats</a>. Acesso em: 08 mai, 2024 às 22:05min. 
             </p>
 
           </div>

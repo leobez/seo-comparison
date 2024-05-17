@@ -1,6 +1,6 @@
 import React from 'react'
 
-const Ssr = () => {
+const Render = () => {
   return (
     <div className='flex'>
 
@@ -19,7 +19,6 @@ const Ssr = () => {
           </div>
       </div>
 
-
       {/* CONTEÚDO */}
       <div className='flex-1 p-4'>
 
@@ -30,7 +29,7 @@ const Ssr = () => {
           <div>
 
             <p className='paragraph'>
-              Para dar prosseguimento a análise proposta neste trabalho, é importante especificar as aborda-gens de renderização de sites: renderização do lado do servidor (SSR) e renderização do lado do cliente (CSR). Prosseguindo, será tratado como essas abordagens podem impactar SEO.
+              Para dar prosseguimento a análise proposta neste trabalho, é importante especificar as abordagens de renderização de sites: renderização do lado do servidor (SSR) e renderização do lado do cliente (CSR). Prosseguindo, será tratado como essas abordagens podem impactar SEO.
             </p>
 
           </div>
@@ -111,7 +110,7 @@ const Ssr = () => {
             </p>
 
             <p className='paragraph'>
-              <span className='reference'>Vega (2017)</span> determina algumas vantagens e desvantagens para CSR. Dentre as vantagens, des-tacam-se:  
+              <span className='reference'>Vega (2017)</span> determina algumas vantagens e desvantagens para CSR. Dentre as vantagens, destacam-se:  
             </p>
             <div className='paragraph'>
               <ul className='list-disc list-inside pl-4 max-w-xl'>
@@ -151,11 +150,11 @@ const Ssr = () => {
             </p>
 
             <p className='paragraph direct-long-ref'>
-              As Métricas da Web são uma iniciativa do Google para fornecer orientações unificadas para indicadores de qualidade da página da web que são essenciais para oferecer uma ótima experiência do usuário na Web. O objetivo é simplificar a ampla variedade de ferramentas de medição de desempenho disponíveis e ajudar os pro-prietários de sites a se concentrar nas métricas mais importantes, as Core Web Vitals <span className='reference'>(Walton, 2024)</span>.
+              As Métricas da Web são uma iniciativa do Google para fornecer orientações unificadas para indicadores de qualidade da página da web que são essenciais para oferecer uma ótima experiência do usuário na Web. O objetivo é simplificar a ampla variedade de ferramentas de medição de desempenho disponíveis e ajudar os proprietários de sites a se concentrar nas métricas mais importantes, as Core Web Vitals <span className='reference'>(Walton, 2024)</span>.
             </p>
 
             <p className='paragraph'>
-              <span className='reference'>Maulidina M. (2024)</span> diz que esse conjunto de métricas, primordialmente, era usado como um indicador de ranqueamento apenas para dispositivos móveis, entretanto, eventualmente, passou a ser usado para o ranqueamento em desktops também, tornando-se um conjunto de métricas fundamental para SEO. As três principais métricas, denominadas <span className='italic'>Core Web Vitals</span> são:
+              <span className='reference'>Firdausi(2024)</span> diz que esse conjunto de métricas, primordialmente, era usado como um indicador de ranqueamento apenas para dispositivos móveis, entretanto, eventualmente, passou a ser usado para o ranqueamento em desktops também, tornando-se um conjunto de métricas fundamental para SEO. As três principais métricas, denominadas <span className='italic'>Core Web Vitals</span> são:
             </p>
             <div className='paragraph'>
               <ul className='list-disc list-inside pl-4 max-w-xl'>
@@ -181,15 +180,11 @@ const Ssr = () => {
             </div>
 
             <p className='paragraph'>
-              Cada uma dessas métricas mede algo relevante para o desempenho e usabilidade de uma página web, e pelo fato de que SSR e CSR podem impactar o desempenho e usabilidade de uma página, como a velocidade de carregamento ou capacidade de interatividade dessa, é possível que os valores dessas métricas sejam afetados, o que pode impactar SEO.
+              Cada uma dessas métricas mede algo relevante para o desempenho de uma página web, e pelo fato de que SSR e CSR podem impactar o desempenho de uma página, é possível que os valores dessas métricas sejam afetados, o que pode impactar SEO. Sendo assim “desempenho do site” podem ser classificados como um dos fatores que podem ser influenciados pela escolha entre SSR e CSR e que podem impactar SEO.
             </p>
 
             <p className='paragraph'>
-              Mas é incerto se estes são os únicos fatores que podem afetar SEO e que podem ser impactados pela escolha entre SSR e CSR. Para determinar se existem outros fatores, é possível utilizar de documentações oficiais de motores de busca a fim de averiguar o que estes consideram como relevantes no ranqueamento de sites. 
-            </p>
-
-            <p className='paragraph'>
-              Através de dados de <span className='reference'>StatCounter (2024)</span>, é possível visualizar que o Google é o mecanismo de busca mais utilizado, com 91.37% de fatia do mercado mundial. Além disso, a Google oferece uma boa noção dos fatores que esta considera como relevantes para o ranqueamento de sites. Em <span className='reference'>(Classificando resultados, 2024)</span>, a Google determina que os seguintes são levados em consideração para determinar a classificação de um site em uma busca: 
+              Para determinar se existem outros fatores além dos mencionados, é possível utilizar de documentações oficiais de motores de busca a fim de averiguar o que estes consideram como relevantes no ranqueamento de sites. O Google oferece uma boa noção dos fatores que este leva em consideração para determinar a classificação de um site em uma busca (Google, 2024): 
             </p>
 
             <div className='paragraph'>
@@ -203,11 +198,11 @@ const Ssr = () => {
             </div>
 
             <p className='paragraph'>
-              Percebe-se que a maior parte desses fatores não possuem relação direta com a abordagem de renderização utilizada em um site, isto é, se este utiliza SSR ou CSR. Os fatores de “relevância do conteudo” e “qualidade do conteúdo” estão relacionados ao conteúdo em si, ou seja, as informações apresentadas no site. Já os fatores de “significado da consulta” e “contexto e configurações” estão relacionadas ao usuário, isto é, o que foi pesquisado pelo usuário e quais são as configurações e contexto deste, por exemplo: localização geográfica. Resta então o fator de usabilidade das páginas web, que, como já foi determinado, é algo que pode ser afetado pela escolha entre SSR e CSR.
+              Percebe-se que a maior parte desses fatores não possuem relação direta com a abordagem de renderização utilizada em um site, isto é, se este utiliza SSR ou CSR. Os fatores de “relevância do conteudo” e “qualidade do conteúdo” estão relacionados ao conteúdo em si, ou seja, as informações apresentadas no site. Já os fatores de “significado da consulta” e “contexto e configurações” estão relacionadas ao usuário, isto é, o que foi pesquisado pelo usuário e quais são as configurações e contexto deste, por exemplo: localização geográfica. Resta então o fator de usabilidade das páginas web, que é algo que pode ser mesurado pelas Web Vitals, dessa forma, enquadra-se no aspecto de “desempenho do site”. 
             </p>
 
             <p className='paragraph'>
-              Determina-se então que os fatores influentes para SEO e que podem ser impactados pela escolha entre SSR e CSR, são:
+              Determina-se então que os fatores influentes para SEO e que podem ser impactados pela escolha entre SSR e CSR são:
             </p>
           
             <div className='paragraph'>
@@ -230,29 +225,27 @@ const Ssr = () => {
           <div>
 
             <p className='paragraph'>
-              Sydorkina
+              Sydorkina, Anastasiia. Key Differences Between Client-Side, Server-Side and Pre-rendering. 2023. Disponível em: <a href="https://clockwise.software/blog/client-side-vs-server-side-vs-pre-rendering/" target='_blank' className='text-blue-800'>https://clockwise.software/blog/client-side-vs-server-side-vs-pre-rendering/</a>. Acesso em: 08 mai, 2024 às 22:07min.
             </p>
 
             <p className='paragraph'>
-              Beke
+              Beke, Mathias. On the Comparison of Software Quality Attributes for Client-side and Server-side Rendering. University of Antwerp, jun. 2018. Disponível em: <a href="https://denbeke.be/thesis/versions/mathias-beke-final.pdf" target='_blank' className='text-blue-800'>https://denbeke.be/thesis/versions/mathias-beke-final.pdf</a>. Acesso em: 08 mai, 2024 às 21:41min. 
             </p>
             <p className='paragraph'>
-              Vega
+              Vega, Cristian. Client-side vs. server-side rendering: why it’s not all black and white. 2017. Disponível em: <a href="https://www.freecodecamp.org/news/what-exactly-is-client-side-rendering-and-hows-it-different-from-server-side-rendering-bd5c786b340d/" target='_blank' className='text-blue-800'>https://www.freecodecamp.org/news/what-exactly-is-client-side-rendering-and-hows-it-different-from-server-side-rendering-bd5c786b340d/</a>. Acesso em: 08 mai, 2024 às 22:26min.
             </p>
             <p className='paragraph'>
-              Ollila; Mäkitalo; Mikkonen
+              Ollila, Risto; Mäkitalo, Niko; Mikkonen, Tommi. Modern Web Frameworks: A Comparison of Rendering Performance. Journal of Web Engineering, vol. 21, n. 3, p. 789-814, Mar. 2022 [ISSN 1544-5976]. Disponível em: <a href="https://journals.riverpublishers.com/index.php/JWE/article/view/7217/11489" target='_blank' className='text-blue-800'>https://journals.riverpublishers.com/index.php/JWE/article/view/7217/11489</a>. Acesso em: 08 mai, 2024 às 21:29min.
             </p>
             <p className='paragraph'>
-              Walton
+              Walton, Philip. Web Vitals. 2024. Disponível em: <a href="https://web.dev/articles/vitals?hl=pt-br" target='_blank' className='text-blue-800'>https://web.dev/articles/vitals?hl=pt-br</a>. Acesso em: 08 mai, 2024 às 22:29min.
             </p>
             <p className='paragraph'>
-              Maulidina M.
+              Firdausi, Maulidina Marlita. What Are Core Web Vitals and How to Measure Them. 2024. Disponível em: <a href="https://www.hostinger.com/tutorials/core-web-vitals" target='_blank' className='text-blue-800'>https://www.hostinger.com/tutorials/core-web-vitals</a>. Acesso em: 08 mai, 2024 às 22:31min.
             </p>
+
             <p className='paragraph'>
-              StatCounter 
-            </p>
-            <p className='paragraph'>
-              Classificando resultados, Google
+              Google. Como resultados são gerados automaticamente. 2024. Disponível em: <a href="https://www.google.com/search/howsearchworks/how-search-works/ranking-results/" target='_blank' className='text-blue-800'>https://www.google.com/search/howsearchworks/how-search-works/ranking-results/</a>. Acesso em: 08 mai, 2024 às 22:34min.
             </p>
 
           </div>
@@ -265,4 +258,4 @@ const Ssr = () => {
   )
 }
 
-export default Ssr
+export default Render

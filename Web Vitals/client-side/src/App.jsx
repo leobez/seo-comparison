@@ -1,11 +1,10 @@
 import './App.css'
 import { BrowserRouter, Route, Routes } from 'react-router-dom'
-import Home from './pages/Home'
 import Page404 from './pages/Page404'
-import Seo from './pages/Seo'
-import Renderizacao from './pages/Renderizacao'
-import Web from './pages/Web'
 import Navbar from './components/Navbar'
+import Text from './pages/Text'
+import Image from './pages/Image'
+import Video from './pages/Video'
 
 function App() {
 
@@ -34,10 +33,9 @@ function App() {
         <div className="max-h-full w-full flex justify-center bg-slate-200 flex-1 min-h-0">
           <div className="max-w-5xl xl:min-w-[1024px] bg-white shadow-lg ">
             <Routes>
-              <Route path='/' element={<Home/>}></Route>
-              <Route path='/web' element={<Web/>}></Route>
-              <Route path='/seo' element={<Seo/>}></Route>
-              <Route path='/render' element={<Renderizacao/>}></Route>
+              <Route path='/' element={<Text/>}></Route>
+              <Route path='/images' element={<Image/>}></Route>
+              <Route path='/videos' element={<Video/>}></Route>
               <Route path='*' element={<Page404/>}></Route>
             </Routes>
           </div>
