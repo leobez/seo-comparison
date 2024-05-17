@@ -1,4 +1,4 @@
-import React from 'react'
+import { useEffect, useState } from 'react'
 import Summary from '../components/Summary'
 
 const Seo = () => {
@@ -8,6 +8,20 @@ const Seo = () => {
     'seo': "SEO",
     'referencias': 'Referências', 
   }
+
+  const [data, setData] = useState(null)
+
+  useEffect(() => {
+
+    const requestData = async() => {
+      await fetch('https://jsonplaceholder.typicode.com/todos/1', {cache: 'no-store'})
+        .then(response => response.json())
+        .then(json => setData(json))
+        .catch(err => setData(null))
+    }
+    requestData()
+
+  }, [])
 
   return (
     <div className='flex'>
@@ -19,8 +33,13 @@ const Seo = () => {
       <div className='flex-1 p-4'>
 
         <section className='my-1' id='ferramentas_de_busca'>
-          <h1 className='text-xl font-bold'>Ferramentas de busca</h1>
-          
+
+          <div className='flex justify-between'>
+            <h1 className='text-xl font-bold'>Ferramentas de busca</h1>
+            {data && <span> <abbr title="Elemento renderizado dinâmicamente"> &#x2713; </abbr></span>}
+            {!data && <span> <abbr title="Elemento renderizado dinâmicamente, mas a chamada deu erro"> &#10060; </abbr></span>}
+          </div>
+
           <div>
 
             <p className='paragraph'>

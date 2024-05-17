@@ -1,6 +1,11 @@
 import React from 'react'
 
-const Web = () => {
+const Web = async() => {
+
+  const res = await fetch('https://jsonplaceholder.typicode.com/todos/1', {cache: 'no-store'})
+    .then(response => response.json())
+    .then(json => json)
+    .catch(err => null)
 
   return (
     <div className='flex relative'>
@@ -31,8 +36,12 @@ const Web = () => {
 
         {/* Renderização de páginas web */}
         <section className='my-1' id='web'>
-          <h1 className='text-xl font-bold'>Web</h1>
-          
+          <div className='flex justify-between'>
+            <h1 className='text-xl font-bold'>Web</h1>
+            {res && <span> <abbr title="Elemento renderizado dinâmicamente"> &#x2713; </abbr></span>}
+            {!res && <span> <abbr title="Elemento renderizado dinâmicamente, mas a chamada deu erro"> &#10060; </abbr></span>}
+          </div>
+
           <div>
 
             <p className='paragraph'>

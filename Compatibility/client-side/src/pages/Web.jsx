@@ -1,4 +1,4 @@
-import React from 'react'
+import { useEffect, useState } from 'react'
 
 import HTMLimage from '../assets/html.png'
 import CSSimage from '../assets/css.png'
@@ -21,6 +21,20 @@ const Web = () => {
     'referencias': 'Referências'
   }
 
+  const [data, setData] = useState(null)
+
+  useEffect(() => {
+
+    const requestData = async() => {
+      await fetch('https://jsonplaceholder.typicode.com/todos/1', {cache: 'no-store'})
+        .then(response => response.json())
+        .then(json => setData(json))
+        .catch(err => setData(null))
+    }
+    requestData()
+
+  }, [])
+
   return (
     <div className='flex relative'>
 
@@ -32,8 +46,13 @@ const Web = () => {
 
         {/* Renderização de páginas web */}
         <section className='my-1' id='web'>
-          <h1 className='text-xl font-bold'>Web</h1>
-          
+
+          <div className='flex justify-between'>
+            <h1 className='text-xl font-bold'>Web</h1>
+            {data && <span> <abbr title="Elemento renderizado dinâmicamente"> &#x2713; </abbr></span>}
+            {!data && <span> <abbr title="Elemento renderizado dinâmicamente, mas a chamada deu erro"> &#10060; </abbr></span>}
+          </div>
+
           <div>
 
             <p className='paragraph'>

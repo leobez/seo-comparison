@@ -1,18 +1,36 @@
-import React from 'react'
-import { Link } from 'react-router-dom';
+import { useEffect, useState } from 'react'
 
 const Home = () => {
+
+  const [data, setData] = useState(null)
+
+  useEffect(() => {
+
+    const requestData = async() => {
+      await fetch('https://jsonplaceholder.typicode.com/todos/1', {cache: 'no-store'})
+        .then(response => response.json())
+        .then(json => setData(json))
+        .catch(err => setData(null))
+    }
+    requestData()
+
+  }, [])
+
   return (
     <main className="text-slate-950">
-
+  
       {/* CONTEÚDO */}
       <div className='flex-1 p-4 z-10'>
 
         {/* Intro */}
         <section className='my-1' id='intro'>
-          
-          <h1 className='text-xl font-bold'>Comparação de SEO em sites SSR e CSR</h1>
-          
+
+          <div className='flex justify-between'>
+            <h1 className='text-xl font-bold'>Comparação de SEO em sites SSR e CSR</h1>
+            {data && <span> <abbr title="Elemento renderizado dinâmicamente"> &#x2713; </abbr></span>}
+            {!data && <span> <abbr title="Elemento renderizado dinâmicamente, mas a chamada deu erro"> &#10060; </abbr></span>}
+          </div>
+
           <div>
 
             <p className='paragraph'>
@@ -22,7 +40,7 @@ const Home = () => {
             <div className='paragraph'>
               <ul className='list-disc list-inside pl-4 max-w-xl'>
                 <li>Compatibilidade com motores de busca;</li>
-                <li>Desempenho e usabilidade do site;</li>
+                <li>Desempenho do site;</li>
               </ul>
             </div>  
 
@@ -68,7 +86,7 @@ const Home = () => {
             </p>
 
             <p className='paragraph'>
-              Com os sites indexados é possível testar se todo conteúdo foi, de fato, indexado corretamente.
+              Com os sites indexados é possível testar se o conteúdo foi, de fato, indexado corretamente.
             </p>
 
           </div>

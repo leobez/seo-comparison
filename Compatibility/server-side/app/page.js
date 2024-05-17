@@ -1,4 +1,9 @@
-export default function Home() {
+export default async function Home() {
+
+  const res = await fetch('https://jsonplaceholder.typicode.com/todos/1', {cache: 'no-store'})
+    .then(response => response.json())
+    .then(json => json)
+    .catch(err => null)
 
   return (
     <main className="text-slate-950">
@@ -9,8 +14,12 @@ export default function Home() {
         {/* Intro */}
         <section className='my-1' id='intro'>
           
-          <h1 className='text-xl font-bold'>Comparação de SEO em sites SSR e CSR</h1>
-          
+          <div className='flex justify-between'>
+            <h1 className='text-xl font-bold'>Comparação de SEO em sites SSR e CSR</h1>
+            {res && <span> <abbr title="Elemento renderizado dinâmicamente"> &#x2713; </abbr></span>}
+            {!res && <span> <abbr title="Elemento renderizado dinâmicamente, mas a chamada deu erro"> &#10060; </abbr></span>}
+          </div>
+
           <div>
 
             <p className='paragraph'>
@@ -20,7 +29,7 @@ export default function Home() {
             <div className='paragraph'>
               <ul className='list-disc list-inside pl-4 max-w-xl'>
                 <li>Compatibilidade com motores de busca;</li>
-                <li>Desempenho e usabilidade do site;</li>
+                <li>Desempenho do site.</li>
               </ul>
             </div>  
 
@@ -44,7 +53,7 @@ export default function Home() {
           <div>
 
             <p className='paragraph'>
-              O teste de compatibilidade consiste em determinar se um motor de busca é compativel com conteudos renderizados através de JS, isto é, se este é capaz de, sem problemas, processar e indexar esses tipos de conteudo. 
+              O teste de compatibilidade consiste em determinar se um motor de busca é compativel com conteudos renderizados através de JS, isto é, se este é capaz de, sem problemas, processar e indexar esses tipos de conteudos. 
             </p>
 
             <p className='paragraph'>
@@ -66,7 +75,7 @@ export default function Home() {
             </p>
 
             <p className='paragraph'>
-              Com os sites indexados é possível testar se todo conteúdo foi, de fato, indexado corretamente.
+              Com os sites indexados é possível testar se o conteúdo foi, de fato, indexado corretamente.
             </p>
 
           </div>
