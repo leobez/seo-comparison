@@ -1,6 +1,6 @@
 import React from 'react'
 
-const Web = ({serverData}) => {
+const Web = () => {
 
   return (
 
@@ -8,7 +8,6 @@ const Web = ({serverData}) => {
 
       {/* SUMÁRIO */}
       <div className='hidden sm:block sticky w-56 top-0 h-[100vh] border-r border-black p-4 '>
-          <div className='font-bold text-lg'>{serverData}</div>
           <div className='font-bold text-lg'>Sumário</div>
           <hr />
           <div>
@@ -340,12 +339,3 @@ const Web = ({serverData}) => {
 }
 
 export default Web
-
-export async function getServerSideProps() {
-  const serverData = 'This is SSR.'
-  return {
-    props: {
-      serverData
-    }
-  }
-}

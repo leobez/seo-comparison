@@ -5,18 +5,12 @@ import "./globals.css";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata = {
-  title: "SEO testing",
-  description: "Site para teste de SEO. Entenda o básico da Web, como motores de busca funcionam, o que é SEO e como as abordagens SSR e CSR podem impactá-la.",
+  title: "Web Vitals Testing",
 };
 
 export default function RootLayout({ children }) {
   return (
     <html lang="pt-br">
-      
-      <head>
-        <meta name="google-site-verification" content="OZ_8GmRPdlC0VzQJPch6pSqakXaLHa0xSBM6lQUffBg" />
-        <meta name="yandex-verification" content="5734313173e51a9f" />
-      </head>
 
       <body className={inter.className}>
 
@@ -27,7 +21,7 @@ export default function RootLayout({ children }) {
             <div className="w-10/12 flex justify-between ">
 
               <div className="flex flex-col gap-2">
-                <p className="text-slate-200 text-xl font-bold">SSR e CSR</p>
+                <p className="text-slate-200 text-xl font-bold">SSR e CSR - Web Vitals</p>
                 <p className=" text-slate-400">Este site é SSR</p>
               </div>
 

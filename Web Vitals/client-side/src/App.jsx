@@ -1,10 +1,7 @@
 import './App.css'
 import { BrowserRouter, Route, Routes } from 'react-router-dom'
 import Page404 from './pages/Page404'
-import Navbar from './components/Navbar'
-import Text from './pages/Text'
-import Image from './pages/Image'
-import Video from './pages/Video'
+import Home from './pages/Home'
 
 function App() {
 
@@ -18,7 +15,7 @@ function App() {
           <div className="w-10/12 flex justify-between">
 
             <div className="flex flex-col gap-2">
-              <p className="text-slate-200 text-xl font-bold">SSR e CSR</p>
+              <p className="text-slate-200 text-xl font-bold">SSR e CSR - Web Vitals</p>
               <p className=" text-slate-400">Este site é CSR</p>
             </div>
 
@@ -26,16 +23,10 @@ function App() {
 
         </header>
 
-        <div className='w-full h-12 grid place-items-center bg-slate-200'>
-          <Navbar/>
-        </div>
-
         <div className="max-h-full w-full flex justify-center bg-slate-200 flex-1 min-h-0">
-          <div className="max-w-5xl xl:min-w-[1024px] bg-white shadow-lg ">
+          <div className="max-w-5xl w-full bg-white shadow-lg ">
             <Routes>
-              <Route path='/' element={<Text/>}></Route>
-              <Route path='/images' element={<Image/>}></Route>
-              <Route path='/videos' element={<Video/>}></Route>
+              <Route path='/' element={<Home/>}></Route>
               <Route path='*' element={<Page404/>}></Route>
             </Routes>
           </div>

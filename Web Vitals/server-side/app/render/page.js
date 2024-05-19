@@ -1,6 +1,6 @@
 import React from 'react'
 
-const Ssr = () => {
+const Render = () => {
   return (
     <div className='flex'>
 
@@ -265,4 +265,4 @@ const Ssr = () => {
   )
 }
 
-export default Ssr
+export default Render
