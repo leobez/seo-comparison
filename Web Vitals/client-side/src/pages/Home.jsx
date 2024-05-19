@@ -3,6 +3,7 @@ import Form from '../components/Form';
 import Text from '../components/Text';
 import Dynamic from '../components/Dynamic';
 import Image from '../components/Image';
+import Image2 from '../components/Image2';
 
 const Home = () => {
   return (
@@ -25,13 +26,11 @@ const Home = () => {
         <div className='separator'/>
         
         <div className='flex flex-col gap-4'>
-          <Image/>   {/* 571kb worth of image */}
-          <Dynamic/> {/* 1 api call -> 8 elements with img rendered */}
-          <Text/>    {/* 10kb worth of text */}
-          <Dynamic/> {/* 1 api call -> 8 elements with img rendered */}
-          <Text/>    {/* 10kb worth of text */}
-          <Dynamic/> {/* 1 api call -> 8 elements with img rendered */}
-          <Form/>    {/* 1 form */}
+          <Image/>   
+          <Text/>    
+          <Image2/>
+          <Dynamic/> 
+          <Form/>    
         </div>
 
       </div>

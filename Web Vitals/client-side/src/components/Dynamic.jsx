@@ -5,13 +5,13 @@ const Dynamic = () => {
     const [data, setData] = useState()
 
     useEffect(() => {
-      fetch('http://jsonplaceholder.typicode.com/photos?_start=0&_limit=8')
+      fetch('https://jsonplaceholder.typicode.com/photos?_start=0&_limit=32')
         .then(response => response.json())
         .then(json => setData(json))
     }, [])
 
     const handleClick = () => {
-      fetch('http://jsonplaceholder.typicode.com/photos?_start=0&_limit=8')
+      fetch('https://jsonplaceholder.typicode.com/photos?_start=0&_limit=8')
         .then(response => response.json())
         .then(json => setData((prev) => [...prev, ...json]))
     }
@@ -22,7 +22,7 @@ const Dynamic = () => {
         <div className='grid grid-cols-1 justify-items-center sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 '>
           {data && data.map((content) => (
             <div key={content.id} className='border-2 border-black relative w-fit'>
-              <img src={content.url} alt="" className='w-[100%] max-h-[220px] max-w-[220px]' />
+              <img src={content.url} alt="" className='h-[220px] w-[220px]' />
               <p className='text-left p-2 absolute bottom-0 bg-white h-22 border-t-2 border-black text-nowrap whitespace-normal overflow-hidden text-ellipsis w-full'>{content.title}</p>
             </div>
           ))}

@@ -37,7 +37,7 @@ const Form = () => {
 
     return (
         <form className='flex flex-col gap-4 border-2 border-black p-4 w-full sm:w-[500px]' onSubmit={handleSubmit}>
-            <p className='font-bold'>Formulário</p>
+            <p className='font-bold'>Input</p>
             <div className='flex gap-2'>
                 <label htmlFor="Input1 w-full">Input1</label>
                 <input type="text" name='Input1' className='border-black border w-full' onChange={(e) => setInput1(e.target.value)}/>
