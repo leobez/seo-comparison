@@ -3,7 +3,6 @@ import Form from '../components/Form';
 import Text from '../components/Text';
 import Dynamic from '../components/Dynamic';
 import Image from '../components/Image';
-import Image2 from '../components/Image2';
 
 const Home = () => {
   return (
@@ -26,11 +25,10 @@ const Home = () => {
         <div className='separator'/>
         
         <div className='flex flex-col gap-4'>
+          <Dynamic/> 
           <Image/>   
           <Text/>    
-          <Image2/>
-          <Dynamic/> 
-          <Form/>    
+          <Form/>
         </div>
 
       </div>
