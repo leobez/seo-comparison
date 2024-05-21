@@ -1,24 +1,29 @@
-import { useEffect, useState } from 'react'
+'use client'
 
-const Dynamic = () => {
+import { useState } from 'react';
 
-    const [data, setData] = useState()
+async function getData() {
+  const response = await fetch(`https://jsonplaceholder.typicode.com/photos?_start=0&_limit=8`, { cache: 'no-store' });
+ 
+  if (!response.ok) {
+    throw new Error('Failed to fetch data');
+  }
+ 
+  return response.json();
+}
 
-    useEffect(() => {
-      fetch('https://jsonplaceholder.typicode.com/photos?_start=0&_limit=100')
-        .then(response => response.json())
-        .then(json => setData(json))
-    }, [])
+const Dynamic = ({ initialData }) => {
 
-    const handleLoadMore = () => {
-      fetch('https://jsonplaceholder.typicode.com/photos?_start=0&_limit=8')
-        .then(response => response.json())
-        .then(json => setData((prev) => [...prev, ...json]))
-    }
+    const [data, setData] = useState(initialData);
 
-    const handleClick = (e) => {
-      console.log(e)
-    }
+    const handleLoadMore = async () => {
+        try {
+            const newData = await getData();
+            setData(prevData => [...prevData, ...newData]);
+        } catch (error) {
+            console.error('Error fetching data:', error);
+        }
+    };
 
     return (
       <div className='border-2 border-black p-4'>
@@ -28,14 +33,14 @@ const Dynamic = () => {
             <div key={content.id} className='border-2 border-black relative w-fit'>
               <img src={content.url} alt={content.id} className='h-[220px] w-[220px]' loading='lazy'/>
               <p className='text-left p-2 absolute bottom-0 bg-white h-22 border-t-2 border-black text-nowrap whitespace-normal overflow-hidden text-ellipsis w-full'>{content.title}</p>
-              <button className='absolute top-0 bg-white border-black border-2 p-2 mt-1 ml-1 hover:bg-slate-200' onClick={handleClick}>Clique aqui</button>
+              <button className='absolute top-0 bg-white border-black border-2 p-2 mt-1 ml-1 hover:bg-slate-200'>Clique aqui</button>
             </div>
           ))}
           <button onClick={handleLoadMore} className='border-2 border-black p-2 hover:bg-slate-200 cursor-pointer'>Carregar mais</button>
         </div>
       </div>
-
     )
 }
 
-export default Dynamic
+
+export default Dynamic;

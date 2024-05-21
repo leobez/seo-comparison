@@ -48,7 +48,7 @@ export default async function Home() {
 
         {/* Compatibilidade */}
         <section className='my-1' id='compatibilidade'>
-          <h1 className='text-xl font-bold'>Teste de compatibilidade</h1>
+          <p className='text-xl font-bold'>Teste de compatibilidade</p>
           
           <div>
 
