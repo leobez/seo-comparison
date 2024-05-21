@@ -5,7 +5,7 @@ const Dynamic = () => {
     const [data, setData] = useState()
 
     useEffect(() => {
-      fetch('https://jsonplaceholder.typicode.com/photos?_start=0&_limit=25', {cache: 'no-store'})
+      fetch('https://jsonplaceholder.typicode.com/photos?_start=0&_limit=100', {cache: 'no-store'})
         .then(response => response.json())
         .then(json => setData(json))
     }, [])
