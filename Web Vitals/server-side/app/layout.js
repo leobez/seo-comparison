@@ -28,19 +28,6 @@ export default function RootLayout({ children }) {
             </div>
           </header>
 
-          {/* NAVBAR */}
-          <div className='w-full h-12 grid place-items-center bg-slate-200'>
-            <nav className=" grid p-1 w-full place-items-center bg-white max-w-5xl text-sm lg:text-base">
-              <ul className="flex text-slate-800 p-1 justify-between w-full gap-1">
-                  <li className="nav-item"><a href="/" className="border-black hover:border-b w-full text-center">Home</a></li>
-                  <li className="nav-item"><a href="/web" className="border-black hover:border-b w-full text-center">Web</a></li>
-                  <li className="nav-item"><a href="/seo" className="border-black hover:border-b w-full text-center">Seo</a></li>
-                  <li className="nav-item"><a href="/render" className="border-black hover:border-b w-full text-center">Renderização</a>
-                </li>
-              </ul>
-            </nav>
-          </div>
-
           {/* MAIN */}
           <div className="max-h-full w-full flex justify-center bg-slate-200 flex-1 min-h-0">
             <div className="max-w-5xl w-full bg-white shadow-lg ">
