@@ -1,4 +1,6 @@
-import React, { useState } from 'react'
+'use client'
+
+import { useState } from 'react'
 
 const Form = () => {
 
@@ -8,9 +10,7 @@ const Form = () => {
     const [input4, setInput4] = useState()
     const [msg, setMsg] = useState([])
 
-    const handleSubmit = (e) => {
-
-        e.preventDefault()
+    const handleSubmit = () => {
 
         let msg = []
 
@@ -36,7 +36,7 @@ const Form = () => {
     }
 
     return (
-        <form className='flex flex-col gap-4 border-2 border-black p-4 w-full sm:w-[500px]' onSubmit={handleSubmit}>
+        <form className='flex flex-col gap-4 border-2 border-black p-4 w-full sm:w-[500px]' action={handleSubmit}>
             <p className='font-bold'>Input</p>
             <div className='flex gap-2'>
                 <label htmlFor="Input1 w-full">Input1</label>
@@ -52,7 +52,7 @@ const Form = () => {
             </div>
             <div className='flex gap-2 w-full'>
                 <label htmlFor="Input4">Input4</label>
-                <textarea name="Input4" id="Input4" className='border border-black min-h-28 w-full' onChange={(e) => setInput4(e.target.value)}></textarea>
+                <textarea name="Input4" id="Input4" className='border border-black min-h-28 w-full' onChange={(e) => setInput4(e.target.value)}/>
             </div>
             <div className='flex gap-2'>
                 <input type="submit" value="Enviar" className='border-2 border-black p-2 hover:bg-slate-200 cursor-pointer'/>

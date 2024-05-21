@@ -16,10 +16,6 @@ const Dynamic = () => {
         .then(json => setData((prev) => [...prev, ...json]))
     }
 
-    const handleClick = (e) => {
-      console.log(e)
-    }
-
     return (
       <div className='border-2 border-black p-4'>
         <p className='font-bold mb-4'>Conteudo dinâmico</p>
@@ -28,7 +24,6 @@ const Dynamic = () => {
             <div key={content.id} className='border-2 border-black relative w-fit'>
               <img src={content.url} alt={content.id} className='h-[220px] w-[220px]' loading='lazy'/>
               <p className='text-left p-2 absolute bottom-0 bg-white h-22 border-t-2 border-black text-nowrap whitespace-normal overflow-hidden text-ellipsis w-full'>{content.title}</p>
-              <button className='absolute top-0 bg-white border-black border-2 p-2 mt-1 ml-1 hover:bg-slate-200' onClick={handleClick}>Clique aqui</button>
             </div>
           ))}
           <button onClick={handleLoadMore} className='border-2 border-black p-2 hover:bg-slate-200 cursor-pointer'>Carregar mais</button>

@@ -1,17 +1,15 @@
 import Dynamic from './components/Dynamic';
 import Image from './components/Image';
-/* import Form from './components/Form'; */
+import Form from './components/Form';
 import Text from './components/Text';
 
 async function getData() {
   const response = await fetch('https://jsonplaceholder.typicode.com/photos?_start=0&_limit=8', { cache: 'no-store' });
   if (!response.ok) {
-    // This will activate the closest `error.js` Error Boundary
     throw new Error('Failed to fetch data')
   }
   return response.json()
 }
-
 
 export default async function Home() {
 
@@ -38,9 +36,9 @@ export default async function Home() {
 
           <div className='flex flex-col gap-4'>
             <Dynamic initialData={initialData} />
-            <Image/>   
+            <Image/>  
             <Text/>    
-            {/* <Form/> */}
+            <Form/>
           </div>
 
         </div>

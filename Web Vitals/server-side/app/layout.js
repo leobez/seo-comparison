@@ -43,7 +43,7 @@ export default function RootLayout({ children }) {
 
           {/* MAIN */}
           <div className="max-h-full w-full flex justify-center bg-slate-200 flex-1 min-h-0">
-            <div className="max-w-5xl xl:min-w-[1024px] bg-white shadow-lg ">
+            <div className="max-w-5xl w-full bg-white shadow-lg ">
               {children}
             </div>
           </div>

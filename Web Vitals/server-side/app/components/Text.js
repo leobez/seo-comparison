@@ -1,5 +1,3 @@
-import React from 'react'
-
 const Text = () => {
 
   /* 100kb worth of text */
