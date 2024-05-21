@@ -5,13 +5,13 @@ const Dynamic = () => {
     const [data, setData] = useState()
 
     useEffect(() => {
-      fetch('https://jsonplaceholder.typicode.com/photos?_start=0&_limit=25', {cache: 'no-cache'})
+      fetch('https://jsonplaceholder.typicode.com/photos?_start=0&_limit=25', {cache: 'no-store'})
         .then(response => response.json())
         .then(json => setData(json))
     }, [])
 
     const handleLoadMore = () => {
-      fetch('https://jsonplaceholder.typicode.com/photos?_start=0&_limit=8', {cache: 'no-cache'})
+      fetch('https://jsonplaceholder.typicode.com/photos?_start=0&_limit=8', {cache: 'no-store'})
         .then(response => response.json())
         .then(json => setData((prev) => [...prev, ...json]))
     }
