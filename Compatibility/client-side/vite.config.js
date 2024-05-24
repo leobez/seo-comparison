@@ -11,6 +11,10 @@ export default defineConfig({
         {
           src: 'sitemap.xml', // Caminho relativo ao diretório raiz do projeto
           dest: '' // Destino relativo à pasta de saída (dist)
+        },
+        {
+          src: '73789909c8834105aea463af6ca487cd.txt', // Caminho relativo ao diretório raiz do projeto
+          dest: '' // Destino relativo à pasta de saída (dist)
         }
       ]
     })

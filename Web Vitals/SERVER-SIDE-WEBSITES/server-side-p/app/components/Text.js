@@ -2,9 +2,13 @@ const Text = () => {
 
   /* each <p> worth 100kb of text */
 
+  const handleClick = () => {
+    
+  }
+
   return (
     <div className='text-justify w-full'>
-      <div className='break-words w-full text-justify flex flex-col gap-4'>
+      <div className='break-words w-full text-justify flex flex-col gap-4' onClick={handleClick}>
         <p className='font-bold'>Texto</p>
         
         <p className="overflow-hidden">

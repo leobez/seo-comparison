@@ -2,9 +2,18 @@ import Dynamic from './components/Dynamic';
 import Image from './components/Image';
 import Form from './components/Form';
 import Text from './components/Text';
+import Dynamic2 from './components/Dynamic2';
 
 async function getData() {
-  const response = await fetch('https://jsonplaceholder.typicode.com/photos?_start=0&_limit=50', { cache: 'no-store' });
+  const response = await fetch('https://jsonplaceholder.typicode.com/posts?_start=0&_limit=100', { cache: 'no-store' });
+  if (!response.ok) {
+    throw new Error('Failed to fetch data')
+  }
+  return response.json()
+}
+
+async function getData2() {
+  const response = await fetch('https://jsonplaceholder.typicode.com/photos?_start=0&_limit=100', { cache: 'no-store' });
   if (!response.ok) {
     throw new Error('Failed to fetch data')
   }
@@ -14,6 +23,7 @@ async function getData() {
 export default async function Home() {
 
   const initialData = await getData()
+  const initialData2= await getData2()
 
   return (
     <main className="text-slate-950">
@@ -36,9 +46,10 @@ export default async function Home() {
 
           <div className='flex flex-col gap-4'>
             <Dynamic initialData={initialData} />
+            <Form/>
+            <Dynamic2 initialData={initialData2} />
             <Image/>  
             <Text/>    
-            <Form/>
           </div>
 
         </div>
