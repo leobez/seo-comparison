@@ -3,7 +3,7 @@ import { BrowserRouter, Route, Routes } from 'react-router-dom'
 import Home from './pages/Home'
 import Page404 from './pages/Page404'
 import Seo from './pages/Seo'
-import Renderizacao from './pages/Renderizacao'
+import Render from './pages/Render'
 import Web from './pages/Web'
 import Navbar from './components/Navbar'
 
@@ -19,8 +19,7 @@ function App() {
           <div className="w-10/12 flex justify-between">
 
             <div className="flex flex-col gap-2">
-              <p className="text-slate-200 text-xl font-bold">SSR e CSR</p>
-              <p className=" text-slate-400">Este site é CSR</p>
+              <p className="text-slate-200 text-xl font-bold">SSR/CSR e SEO</p>
             </div>
 
           </div>
@@ -37,7 +36,7 @@ function App() {
               <Route path='/' element={<Home/>}></Route>
               <Route path='/web' element={<Web/>}></Route>
               <Route path='/seo' element={<Seo/>}></Route>
-              <Route path='/render' element={<Renderizacao/>}></Route>
+              <Route path='/render' element={<Render/>}></Route>
               <Route path='*' element={<Page404/>}></Route>
             </Routes>
           </div>

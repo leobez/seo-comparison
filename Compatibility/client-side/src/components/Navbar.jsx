@@ -29,7 +29,7 @@ const Navbar = () => {
                         className={({isActive, isPending}) => 
                             isPending ? 'pending' : isActive ? 'active' : 'nav-hover'
                         }>
-                        Seo
+                        Motor de busca
                     </NavLink>
                 </li>
 

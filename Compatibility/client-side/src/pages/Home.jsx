@@ -1,20 +1,4 @@
-import { useEffect, useState } from 'react'
-
 const Home = () => {
-
-  const [data, setData] = useState(null)
-
-  useEffect(() => {
-
-    const requestData = async() => {
-      await fetch('https://jsonplaceholder.typicode.com/todos/1', {cache: 'no-store'})
-        .then(response => response.json())
-        .then(json => setData(json))
-        .catch(err => setData(null))
-    }
-    requestData()
-
-  }, [])
 
   return (
     <main className="text-slate-950">
@@ -26,9 +10,7 @@ const Home = () => {
         <section className='my-1' id='intro'>
 
           <div className='flex justify-between'>
-            <h1 className='text-xl font-bold'>Comparação de SEO em sites SSR e CSR</h1>
-            {data && <span> <abbr title="Elemento renderizado dinâmicamente"> &#x2713; </abbr></span>}
-            {!data && <span> <abbr title="Elemento renderizado dinâmicamente, mas a chamada deu erro"> &#10060; </abbr></span>}
+            <h1 className='text-xl font-bold'>O impacto da abordagem de renderização em SEO</h1>
           </div>
 
           <div>
@@ -45,7 +27,7 @@ const Home = () => {
             </div>  
 
             <p className='paragraph'>
-              Sendo assim, é necessário testar esses aspectos tanto em um site SSR quanto em um CSR para determinar o impacto que a abordagem escolhida causa em SEO.
+              Sendo assim, é necessário testar esses aspectos para determinar o impacto que a abordagem escolhida causa em SEO.
             </p>
 
             <p className='paragraph'>
@@ -83,11 +65,7 @@ const Home = () => {
             </div> 
             
             <p className='paragraph'>
-              Para cada um desses motores, dois sites similares, um SSR e um CSR (esse) foram indexados.
-            </p>
-
-            <p className='paragraph'>
-              Com os sites indexados é possível testar se o conteúdo foi, de fato, indexado corretamente.
+              Para cada um desses motores um site CSR (esse) foi indexado para posterior teste.
             </p>
 
           </div>

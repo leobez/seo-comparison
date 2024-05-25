@@ -1,4 +1,3 @@
-import { useEffect, useState } from 'react'
 import Summary from '../components/Summary'
 
 const Seo = () => {
@@ -8,20 +7,6 @@ const Seo = () => {
     'seo': "SEO",
     'referencias': 'Referências', 
   }
-
-  const [data, setData] = useState(null)
-
-  useEffect(() => {
-
-    const requestData = async() => {
-      await fetch('https://jsonplaceholder.typicode.com/todos/1', {cache: 'no-store'})
-        .then(response => response.json())
-        .then(json => setData(json))
-        .catch(err => setData(null))
-    }
-    requestData()
-
-  }, [])
 
   return (
     <div className='flex'>
@@ -35,16 +20,10 @@ const Seo = () => {
         <section className='my-1' id='ferramentas_de_busca'>
 
           <div className='flex justify-between'>
-            <h1 className='text-xl font-bold'>Ferramentas de busca</h1>
-            {data && <span> <abbr title="Elemento renderizado dinâmicamente"> &#x2713; </abbr></span>}
-            {!data && <span> <abbr title="Elemento renderizado dinâmicamente, mas a chamada deu erro"> &#10060; </abbr></span>}
+            <h1 className='text-xl font-bold'>Motores de busca</h1>
           </div>
 
           <div>
-
-            <p className='paragraph'>
-              Para dar prosseguimento a pesquisa proposta neste trabalho, é preciso esclarecer as tecnologias que compõem as ferramentas de busca, para então explicar o que é Search Engine Optimization (SEO). 
-            </p>
 
             <p className='paragraph'>
               <span className='reference'>Cendón (2001, p. 39)</span> diz que nos primórdios da Web surgiu a preocupação de criar ferramentas de busca que fossem capazes de localizar recursos informacionais na Web. Dentre as soluções propostas, uma dessas é o motor de busca. <span className='reference'>Seymour, Frantsvog e Kumar (2011, p. 55)</span> definem que motores de busca operam em três etapas: <span className='italic'>web crawling</span>, indexação (<span className='italic'>indexing</span>) e busca (<span className='italic'>search</span>).
