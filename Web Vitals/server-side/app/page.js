@@ -13,7 +13,7 @@ async function getData() {
 }
 
 async function getData2() {
-  const response = await fetch('https://jsonplaceholder.typicode.com/photos?_start=0&_limit=100', { cache: 'no-store' });
+  const response = await fetch('https://jsonplaceholder.typicode.com/photos?_start=0&_limit=5000', { cache: 'no-store' });
   if (!response.ok) {
     throw new Error('Failed to fetch data')
   }

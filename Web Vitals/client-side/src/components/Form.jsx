@@ -31,6 +31,8 @@ const Form = () => {
 
         e.preventDefault()
 
+        console.log(e.target)
+
         let msg = []
 
         if (title === undefined || title === null || title === '') {
