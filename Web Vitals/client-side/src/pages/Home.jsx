@@ -25,8 +25,8 @@ const Home = () => {
         <div className='separator'/>
         
         <div className='flex flex-col gap-4'>
-          <Dynamic/> 
           <Form/>
+          <Dynamic/> 
           <Dynamic2/> 
           <Image/>   
           <Text/>    
