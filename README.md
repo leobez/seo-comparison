@@ -24,6 +24,11 @@ Neste trabalho foram feitos dois tipos de testes para determinar SEO nas abordag
 
 ### Teste de compatibilidade
 
+#### Requisitos funcionais
+<p align="justify">
+    <img src="https://github.com/leobez/seo-comparison/blob/main/images_for_readme/RF%20-%20compat..png"/>
+</p>
+
 #### Etapas
 - Desenvolvimento de um [site CSR](https://github.com/leobez/seo-comparison/tree/main/Teste%20de%20compatibilidade/Site_desenvolvido/client-side), com React.js;
 - Hospedagem desse site na [Vercel](https://vercel.com/);
@@ -50,7 +55,7 @@ Neste trabalho foram feitos dois tipos de testes para determinar SEO nas abordag
 > 1/4 das páginas foram indexadas no Yandex
 
 
-##### Pesquisa 2 - Pesquisa pelos textos do site
+##### Pesquisa 3 - Pesquisa pelos textos do site
 <p align="justify">
     <img src="https://github.com/leobez/seo-comparison/blob/main/images_for_readme/Tabela%20compat.%203.png"/>
 </p>
@@ -69,22 +74,32 @@ Neste trabalho foram feitos dois tipos de testes para determinar SEO nas abordag
 
 ### Teste de desempenho
 
+#### Requisitos funcionais
+<p align="justify">
+    <img src="https://github.com/leobez/seo-comparison/blob/main/images_for_readme/RF%20-%20desemp..png"/>
+</p>
+
 #### Etapas
 - Desenvolvimento de um [site SSR](https://github.com/leobez/seo-comparison/tree/main/Teste%20de%20desempenho/Sites_desenvolvidos/server-side), com Next.js e um [site CSR](https://github.com/leobez/seo-comparison/tree/main/Teste%20de%20desempenho/Sites_desenvolvidos/client-side), com React.js;
-- Realização de testes de Web Vitals nesses sites com a ferramenta [Lighthouse](https://chromewebstore.google.com/detail/lighthouse/blipmdconlkpinefehnmjammfjpmpbjk?hl=pt-BR). Métricas consideradas: LCP, INP, CLS, SI, FCP, TBT e TTFB.
+- Realização de testes de Web Vitals nesses sites com a ferramenta [Lighthouse](https://chromewebstore.google.com/detail/lighthouse/blipmdconlkpinefehnmjammfjpmpbjk?hl=pt-BR).
+- Os testes foram feitos nos ambiente Desktop e Mobile. As Métricas consideradas foram: LCP, INP, CLS, SI, FCP, TBT e TTFB.
 
 #### Resultados obtidos
-> Tabela 1
-- Descrição
 
-> Tabela 2
-- Descrição
+##### Médias dos resultados dos testes no Lighthouse
+<p align="justify">
+    <img src="https://github.com/leobez/seo-comparison/blob/main/images_for_readme/lighthouse-media.png"/>
+</p>
 
-> Tabela 3
-- Descrição
+##### Médias dos resultados dos testes no Chrome DevTools
+<p align="justify">
+    <img src="https://github.com/leobez/seo-comparison/blob/main/images_for_readme/chromeDevTools-media.png"/>
+</p>
 
-> Tabela 4
-- Descrição
+> No geral, os impactos da abordagem SSR foram: SI no ambiente mobile; TBT no ambiente mobile; TTFB com fast 3G
+
+> No geral, os impactos da abordagem CSR foram: LCP no ambiente mobile; CLS em ambos ambientes
+
 
 #### Conclusões
 - Caso se desenvolva um site SSR, deve-se atentar a exibição gradual dos elementos do site (SI), a duração dos processos JavaScript do site em ambientes mobile (TBT) e a velocidade de resposta do servidor a primeira requisição do cliente (TTFB);
