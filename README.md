@@ -15,8 +15,8 @@ Palavras-Chave: Renderização; Servidor; Cliente; Otimização; Motor de busca.
 <hr>
 
 Neste trabalho foram feitos dois tipos de testes para determinar SEO nas abordagens SSR e CSR:
-  - Testes de [compatibilidade com motores de busca](https://github.com/leobez/seo-comparison/tree/main/Teste%20de%20compatibilidade)
-  - Testes de [desempenho](https://github.com/leobez/seo-comparison/tree/main/Teste%20de%20desempenho)
+  - Teste de [compatibilidade com motores de busca](https://github.com/leobez/seo-comparison/tree/main/Teste%20de%20compatibilidade)
+  - Teste de [desempenho](https://github.com/leobez/seo-comparison/tree/main/Teste%20de%20desempenho)
 
 <hr>
 
