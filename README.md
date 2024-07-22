@@ -4,8 +4,6 @@
 
 Link para o documento: [Link]
 
-> Approval Photo
-
 ### Resumo
 
 <p align="justify">
@@ -16,7 +14,7 @@ Palavras-Chave: Renderização; Servidor; Cliente; Otimização; Motor de busca.
 
 <hr>
 
-Neste trabalho foram feitos dois tipos de testes para determinar SEO nas abordagens SSR e CSR:
+Neste trabalho foram feitos dois tipos de testes para determinar SEO das abordagens SSR e CSR:
   - Teste de [compatibilidade com motores de busca](https://github.com/leobez/seo-comparison/tree/main/Teste%20de%20compatibilidade)
   - Teste de [desempenho](https://github.com/leobez/seo-comparison/tree/main/Teste%20de%20desempenho)
 
