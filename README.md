@@ -91,10 +91,28 @@ Neste trabalho foram feitos dois tipos de testes para determinar SEO nas abordag
 - Caso se desenvolva um site CSR, deve-se atentar a estabilidade visual (CLS) e a velocidade de exibição do maior elemento do site em ambientes mobile (LCP);
 - Esses foram os aspectos determinados como relevantes para SEO no que diz respeito a desempenho nessas abordagens.
 
+<hr>
 
+### Tecnologias usadas
 
-
-
-
+- Visual Studio Code;
+- Tailwind CSS;
+- React.js;
+- Vite;
+- Next.js;
+- Vercel;
+- JSONPlaceholder;
+- Git;
+- Github;
+- Lighthouse;
+- Chrome DevTools;
+- Google Search Console;
+- Bing Webmaster Tools;
+- Yandex Webmaster;
+- Google;
+- Bing;
+- Yandex;
+- Yahoo!;
+- DuckDuckGo.
 
 
