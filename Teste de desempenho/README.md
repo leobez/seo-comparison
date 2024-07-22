@@ -21,7 +21,7 @@ Para cada site foi feita a seguinte bateria de testes:
 
 Exemplo:
 
-<img src="https://github.com/leobez/seo-comparison/blob/main/images_for_readme/img/img%202.png"/>
+<img src="https://github.com/leobez/seo-comparison/blob/main/images_for_readme/img%202.png"/>
 
 Cada um desses testes foi repetido 5 vezes e o valor considerado no final é a média dos resultados obtidos, por isso cada teste possui 5 arquivos diferentes (resultados do lighthouse foram salvos nos formatos HTML e JSON).
 
