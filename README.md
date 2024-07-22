@@ -31,7 +31,11 @@ Neste trabalho foram feitos dois tipos de testes para determinar SEO nas abordag
 - Realização de pesquisas nos mecanismos Google, Bing, Yandex, Yahoo! e DuckDuckGo para avaliar se o site foi indexado corretamente.
 
 #### Resultados obtidos
-> Resultados obtidos.
+> Tabela 1
+- Descrição
+
+> Tabela 2
+- Descrição
 
 #### Conclusões
 - A abordagem CSR é compatível com, ao menos, o Google, que detém uma fatia de 98,8% do mercado mundial de mecanismos de busca;
@@ -47,7 +51,27 @@ Neste trabalho foram feitos dois tipos de testes para determinar SEO nas abordag
 - Realização de testes de Web Vitals nesses sites com a ferramenta [Lighthouse](https://chromewebstore.google.com/detail/lighthouse/blipmdconlkpinefehnmjammfjpmpbjk?hl=pt-BR). Métricas consideradas: LCP, INP, CLS, SI, FCP, TBT e TTFB.
 
 #### Resultados obtidos
-> Resultados obtidos.
+> Tabela 1
+- Descrição
+
+> Tabela 2
+- Descrição
+
+> Tabela 3
+- Descrição
+
+> Tabela 4
+- Descrição
 
 #### Conclusões
-> Conclusões
+- Caso se desenvolva um site SSR, deve-se atentar a exibição gradual dos elementos do site (SI), a duração dos processos JavaScript do site em ambientes mobile (TBT) e a velocidade de resposta do servidor a primeira requisição do cliente (TTFB);
+- Caso se desenvolva um site CSR, deve-se atentar a estabilidade visual (CLS) e a velocidade de exibição do maior elemento do site em ambientes mobile (LCP);
+- Esses foram os aspectos determinados como relevantes para SEO no que diz respeito a desempenho nessas abordagens.
+
+
+
+
+
+
+
+
